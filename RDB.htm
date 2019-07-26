@@ -1,0 +1,1580 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" id="viewport" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="noimageindex, noarchive" name="robots">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+    <meta content="yes" name="mobile-web-app-capable">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,600,900%7CRoboto+Mono:300,400,500,700" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: "Roboto mono", Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            vertical-align: baseline;
+            list-style-type: none;
+            border: 0;
+            outline: 0;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div class="row">
+
+        <div class="logoicon">
+            <svg class="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path></defs><clipPath id="b"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"></path><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"></path></svg>
+        </div>
+        <div class="formcon">
+
+            <form class="form-inline " id="search-form" name="search-form" onsubmit="return search()">
+                <div width="100%" class="form_container">
+                    <div class="d3" style="width:100%;">
+                        <input class="form-control search-field" type="search" id="query" style="width:100%;" placeholder="Search">
+                        <button class="search-btn" type="submit" id="search-btn" name="search-btn">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 57.966 57.966" class="srchicon">
+                      <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path>
+                   </svg>                
+                            </button>
+                    </div>
+                    <div>
+                        <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                            </svg>
+                    </div>
+                    <div>
+                        <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+             </svg>
+                    </div>
+
+                </div>
+
+                <ul class="tabs">
+                    <li><a class="active" href="#/one">Web</a></li>
+                    <li><a class="" href="#/two">Images</a></li>
+                    <li><a class="" href="#/three">Videos</a></li>
+                    <li><a class="" href="#/four">Wiki</a></li>
+                </ul>
+            </form>
+        </div>
+        <div class="hidemob">
+            <div class="topright">
+                <svg class="pincodeMain" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" x="0px" y="0px">
+                <g id="art">
+                   <image id="image" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="file:///C:/Users/me/Pictures/dragon.PNG" preserveAspectRatio="xMidYMid slice"></image>
+                </g>
+             </svg>
+            </div>
+        </div>
+    </div>
+    <style>
+        #image {
+            width: 100%;
+            height: auto;
+        }
+
+        .pincodemain {
+            fill: none;
+            box-shadow: 1px 1px 5px rgb(212, 212, 212);
+            border-radius: 8px;
+            background: #fff;
+            padding: 2px;
+            stroke: #1ed760;
+        }
+
+        .topright {
+            align-self: flex-start;
+        }
+
+    </style>
+
+    <style>
+        .row {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1;
+            background: white;
+            width: 100%;
+            border-bottom: 1px solid #ffdd00;
+            top: 0px;
+            padding: 0.3rem 0.2rem 0 0.2rem;
+            /* box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.08); */
+        }
+
+        .ticons,
+        .heart {
+            fill: none;
+            display: block;
+            stroke: #000000;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: .2s ease;
+            filter: drop-shadow(0px 1px 2px #00000055);
+        }
+
+        .heart {
+            height: 3.3rem;
+            width: 3.3rem;
+            margin: 0 0.4rem;
+            stroke: none;
+            filter: none !important;
+        }
+
+        .topright {
+            align-self: center;
+        }
+
+        .formcon {
+            padding: 0.2rem 0.4rem 0rem 0.4rem;
+            display: flex;
+            background: #ffffff;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .form_container {
+            display: flex;
+            align-items: center;
+        }
+
+
+        #image {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+
+
+    <style>
+        .row {
+            position: sticky;
+            display: flex;
+            background: #ffffff;
+            justify-content: space-between;
+            z-index: 1;
+            width: 100%;
+            top: 0px;
+            border-bottom: 1px solid #ffdd00;
+            padding: 0.4rem 0 0 0;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            .ticons {
+                display: block;
+                margin: 0px 0.4rem 0 0;
+                height: 2.8rem;
+            }
+            .hidemob {
+                display: none;
+            }
+            .form-inline {
+                width: 100%;
+            }
+            .srchicon {
+                width: 2rem;
+                height: 2rem;
+            }
+            .search-field {
+                font-size: 1.2rem;
+                height: 2.8rem;
+                padding: 0rem 0.4rem;
+            }
+            .search-btn {
+                height: 2.8rem;
+                padding: 0rem 0.4rem;
+            }
+            .pincodemain {
+                margin: 0px 0.4rem 0 0.2rem;
+                width: 2.9rem !important;
+                height: 2.9rem !important;
+            }
+            .topright {
+                order: 1;
+                display: none;
+            }
+            .formcon {
+                order: 2;
+            }
+            .hidemob {
+                display: none;
+                order: 1;
+            }
+            .ticons {
+                margin: 0px 0 0 0.4rem;
+                height: 2.2rem;
+            }
+            .search-field {
+                height: 2.6rem;
+            }
+            .search-btn {
+                height: 2.6rem;
+                padding: 0rem 0.4rem;
+            }
+            .panel {
+                padding: 0px 0px 0px 0px;
+            }
+            .video-items.puzzle li {
+                flex-basis: 50%;
+            }
+        }
+
+        @media screen and (max-width: 1199px) and (min-width: 601px) {
+            .ticons {
+                display: block;
+                margin: 0px 0.4rem;
+                height: 2.6rem;
+            }
+            .form-inline {
+                width: 100%;
+            }
+            .hidemob {
+                display: flex;
+            }
+            .panel {
+                padding: 0px 30px 0px 30px;
+            }
+            .video-items.puzzle li {
+                flex-basis: 33.33%;
+            }
+            .srchicon {
+                width: 2rem;
+                height: 2rem;
+            }
+            .search-field {
+                height: 2.8rem;
+                font-size: 1.2rem;
+                padding: 0rem 0.5rem;
+            }
+            .search-btn {
+                height: 2.8rem;
+                padding: 0rem 0.5rem;
+            }
+            .pincodemain {
+                margin: 0px 0.4rem;
+                width: 2.9rem !important;
+                height: 2.9rem !important;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            body::-webkit-scrollbar {
+                width: 12px;
+            }
+            body::-webkit-scrollbar-thumb {
+                background-color: #555;
+            }
+            .ticons {
+                display: block;
+                margin: 0px 0 0 1rem;
+                height: 2.6rem;
+            }
+            .panel {
+                padding: 0px 40px 0px 40px;
+            }
+            .hidemob {
+                display: flex;
+            }
+            .form-inline {
+                width: 100%;
+            }
+            .srchicon {
+                width: 2.2rem;
+                height: 2.2rem;
+                margin-top: -0.3rem;
+            }
+            .search-field {
+                height: 3rem;
+                padding: 0rem 1.2rem;
+                font-size: 1.4rem;
+            }
+            .search-btn {
+                height: 3rem;
+                padding: 0rem 0.6rem;
+            }
+            .pincodemain {
+                margin: 2px 1rem;
+                width: 3.6rem !important;
+                height: 3.6rem !important;
+            }
+        }
+
+
+
+        .hidemob {
+            align-self: center;
+            align-items: center;
+        }
+
+        .form-inline {
+            align-self: flex-start;
+            width: 100%;
+            max-width: 700px;
+            position: sticky;
+        }
+
+        .d3 {
+            display: flex;
+            box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
+            background: #ffffff;
+            border: 1px solid #ffffff;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .search-btn {
+            background-color: rgb(0, 0, 0);
+            border: none;
+            outline: none;
+            border-radius: 0 4px 4px 0;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
+        }
+
+        .search-field {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 0px;
+            outline: none;
+            padding: 0rem 0.6rem;
+            background: transparent;
+            color: #000;
+            font-size: 1.1rem;
+        }
+
+        .srchicon {
+            fill: #ffffff;
+            margin: 0.01rem 0.1rem;
+        }
+
+    </style>
+
+    <style>
+        @media screen and (max-width: 600px) {
+            ul.tabs li a span {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1199px) and (min-width: 601px) {
+            ul.tabs li a span {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {}
+
+    </style>
+
+    <style>
+        ul.tabs {
+            margin: 0 auto;
+            display: flex;
+            list-style: none;
+            overflow: hidden;
+            padding: 0;
+            justify-content: flex-start;
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+            position: sticky;
+            /* box-shadow: 0px -4px 12px #00000054; */
+        }
+
+        ul.tabs::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        ul.tabs li {
+            padding: 0px 0.6rem 0 0;
+        }
+
+        ul.tabs li a {
+            position: relative;
+            display: block;
+            padding: 8px 10px 2px 10px;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: black;
+            line-height: 2rem;
+            text-align: center;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        ul.tabs li a.active {
+            z-index: 4;
+            outline: none;
+            border-bottom: 3px solid #ffdd00;
+        }
+
+        #content {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+    </style>
+    <div class="navcon">
+        <div class="logoicon">
+            <svg class="logoogle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path></defs><clipPath id="b"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"></path><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"></path></svg>
+        </div>
+        <div class="logoicon">
+            <svg class="logoogle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"><path d="M28.111,5.022l-1.215-3.655C26.625,0.55,25.861,0,25,0H7C6.138,0,5.375,0.55,5.102,1.367  L3.877,5.024C2.833,5.091,2,5.939,2,7v3c0,1.104,0.896,2,2,2h1.034c0,0.075-0.03,0.146-0.021,0.221l2,18C7.125,31.232,7.98,32,9,32  h14c1.02,0,1.875-0.768,1.986-1.779l2-18c0.01-0.075-0.021-0.146-0.021-0.221H28c1.104,0,2-0.896,2-2V7  C30,5.935,29.16,5.083,28.111,5.022z M7,2h18l1,3H6L7,2z M9,30l-0.333-3h14.666L23,30H9z M23.443,26H8.555L7.444,16h17.111  L23.443,26z M24.666,15H7.333L7,12h18L24.666,15z M28,10H4V7h24V10z" fill="#333333" id="cup"></path></svg>
+        </div>
+        <div class="logoicon">
+            <svg class="logoogle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"><path clip-rule="evenodd" d="M25.914,13.143C25.477,8.58,21.678,5,17,5  c-3.619,0-6.717,2.148-8.146,5.23C8.424,10.094,7.976,10,7.501,10c-2.485,0-4.5,2.016-4.5,4.5c0,0.494,0.099,0.961,0.246,1.404  c-1.933,1.127-3.246,3.195-3.246,5.594c0,3.59,2.91,6.5,6.5,6.5V28H24.5v-0.002c4.143,0,7.5-3.357,7.5-7.5  C32,16.842,29.379,13.805,25.914,13.143z M24.5,25.998V26H6.501c-2.481-0.002-4.5-2.02-4.5-4.502c0-1.6,0.843-3.045,2.254-3.867  c1.371-0.787,1.465-0.943,0.89-2.357c-0.097-0.291-0.144-0.544-0.144-0.773c0-1.379,1.121-2.5,2.5-2.5c0,0,0.656-0.047,1.353,0.23  c1.147,0.457,1.272,0.02,1.814-1.159C11.815,8.599,14.3,7,17,7c3.6,0,6.576,2.723,6.924,6.334c0.123,1.432,0.123,1.432,1.615,1.773  C28.125,15.601,30,17.869,30,20.498C30,23.531,27.533,25.998,24.5,25.998z" fill="#333333" fill-rule="evenodd" id="cloud"></path></svg>
+        </div>
+    </div>
+    <div class="wrap">
+        <style>
+            .navcon {
+                flex: 2 1 3%;
+                padding: 0 0.5rem;
+                -webkit-flex: 2 1 3%;
+                display: none;
+            }
+
+            .logoicon {
+                margin: 0.5rem 1rem;
+            }
+
+            .logoogle {
+                fill: none;
+                height: 3.5rem;
+                padding: 6px;
+                box-shadow: 1px 2px 5px rgb(212, 212, 212);
+                width: 3.5rem;
+                border-radius: 8px;
+                background: #fff;
+            }
+
+        </style>
+        <div id="content">
+            <section id="one">
+                <div>
+                    <div id="notes">
+                        <div class="note">
+                            <div class="line"><span class="green">Allkpop | Breaking K-pop news, videos, photos and celebrity ...</span></div>
+                            <div class="line small mt">Breaking K-pop news, videos, photos and celebrity gossip | allkpop</div>
+                            <div class="line med mt"><span>https://www.allkpop.com</span></div>
+                        </div>
+
+                        <div class="note">
+                            <div class="line"><span class="green">K-Pop - Topic - YouTube</span></div>
+                            <div class="line small mt">K-pop is a music genre originating in South Korea that is characterized by a wide variety of audiovisual elements. Although it includes all genres of "popula...</div>
+                            <div class="line med mt"><span>youtube.com/music/kpop</span></div>
+
+                        </div>
+                        <div class="note">
+                            <div class="line"><span class="green">Koreaboo — breaking k-pop news, photos and viral videos</span></div>
+                            <div class="line small mt">Find breaking k-pop news, korean viral videos and exclusive content from the biggest k-pop idols. Creators of KCON and biggest k-pop site in the world.</div>
+                            <div class="line med mt"><span>koreaboo.com</span></div>
+
+                        </div>
+                        <div class="note">
+                            <div class="line"><span class="green">32,000+ Free Kpop music playlists | 8tracks radio</span></div>
+                            <div class="line small mt">8tracks radio. Online, everywhere. - stream 32,000+ kpop playlists including korean, f(x), and shinee music from your desktop or mobile device.</div>
+                            <div class="line med mt"><span>yahoo.com/style/tagged/food</span></div>
+
+                        </div>
+                        <div class="note">
+                            <div class="line"><span class="green">1 Million pins about KPOP | Pinterest</span></div>
+                            <div class="line small mt">Find photos of your favourite KPOP idols on Pinterest...</div>
+                            <div class="line med mt"><span>pinterest.com/categories/kpop</span></div>
+
+                        </div>
+                        <div id="no-cards">
+                            <div class="line">No cards</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <style>
+                #notes {
+                    padding: 0px 0px 0px 2rem;
+                    max-width: 700px;
+                }
+
+                .note {
+                    min-height: 45px;
+                    border-radius: 1px;
+                    cursor: pointer;
+                    transition: transform .5s;
+                    padding: 10px 0;
+                    margin: 0.3rem;
+                }
+
+                .note:hover {}
+
+                #notes>div:nth-child(n+1) {
+                    margin-bottom: 0px;
+                }
+
+                #notes>div:nth-last-child(2) {
+                    margin-bottom: 0;
+                }
+
+                .note span {
+                    vertical-align: top;
+                    font-weight: 500;
+                    color: #1d00cc;
+                }
+
+                .note span.green {
+                    color: #0aa701;
+                    font-weight: 500;
+                    line-height: 24px;
+                    font-size: 20px;
+                }
+
+                .note .line.med {
+                    font-size: 15px;
+                }
+
+                .note .line.small {
+                    color: #525151;
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-top: 4px;
+                    font-family: breezesans;
+                }
+
+                .note .line.large {
+                    margin-top: 2px;
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+
+                #no-cards {
+                    display: none;
+                    margin-top: 5px;
+                }
+
+            </style>
+
+            <section id="two" style="display: none;">
+                <div class="_1fgQj">
+                    <div class="_2Ru_P">
+                        <div class="_3b4NQ">
+                            <div class="R6-Wf">
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/bird">Cast</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/flowers">Frodo</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/animal">Hobbits</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Rohan</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/parrot">Gollum</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/eagle">War</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/nature">Triology</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">BTS</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Mordor</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Scenes</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Ghosts</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="imigis">
+
+
+                    <style>
+                        main {
+                            width: 50%;
+                        }
+
+                        picture {
+                            position: relative;
+                            display: block;
+                            overflow: hidden;
+                            background: #eee;
+                            margin: .5rem .25rem;
+                            transform: translateY(4rem);
+                            transform-origin: top;
+                            opacity: 0;
+                            transition: .5s all cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                        }
+
+                        picture.loaded {
+                            transform: none;
+                            opacity: 1;
+                        }
+
+                        picture>img {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                        pre {
+                            width: 100%;
+                            max-width: 29em;
+                            margin: 1rem auto;
+                            background: #a32b75;
+                            color: #fff;
+                            padding: .5rem 1rem;
+                            overflow-x: auto;
+                        }
+
+                        code b {
+                            font-weight: normal;
+                            opacity: .5;
+                        }
+
+                        code i {
+                            font-style: normal;
+                            text-shadow: 0 0 4px rgba(255, 255, 255, .5);
+                        }
+
+                        .content {
+                            margin-bottom: 4rem;
+                        }
+
+                        .loader {
+                            margin-bottom: 100vh;
+                            text-align: center;
+                        }
+
+                        .grid {
+                            margin: .25rem;
+                        }
+
+                        .gridItem {
+                            width: 50%;
+                        }
+
+                        .m,
+                        .l {
+                            display: none;
+                        }
+
+                        @media (min-width: 600px) {
+                            .gridItem {
+                                width: 50%;
+                            }
+                            .s {
+                                display: none;
+                            }
+                            .m {
+                                display: inline;
+                            }
+                        }
+
+                        @media (min-width: 900px) {
+                            .gridItem {
+                                width: 33.33%;
+                            }
+                            .m {
+                                display: none;
+                            }
+                            .l {
+                                display: inline;
+                            }
+                        }
+
+                        @media (min-width: 1200px) {
+                            .gridItem {
+                                width: 25%;
+                            }
+                            .m {
+                                display: none;
+                            }
+                            .l {
+                                display: inline;
+                            }
+                        }
+
+                    </style>
+                    <main>
+                        <div class="grid"></div>
+                        <div class="loader">Loading&hellip;</div>
+                    </main>
+                    <script>
+                        /** @version 0.2.2 */
+                        function TinyMasonry(b) {
+                            function h(a) {
+                                var c = 100 / a + "%";
+                                for (d = []; a--;) {
+                                    var e = document.createElement("div");
+                                    e.style.width = c;
+                                    e.style["float"] = "left";
+                                    b.appendChild(e);
+                                    d.push(e)
+                                }
+                            }
+
+                            function g(a) {
+                                a = Math.min(42, Math.round(a.parentElement.clientWidth / a.clientWidth)) || 1;
+                                for (var f; f = b.firstElementChild;) f.parentNode.removeChild(f);
+                                b.style.overflow = "hidden";
+                                h(a);
+                                c.items.forEach(function(a) {
+                                    a.style.display = "block";
+                                    a.style.width = "auto";
+                                    a.style.visibility = "";
+                                    for (var b = d[0], c = d.length; c--;) d[c].clientHeight <= b.clientHeight && (b = d[c]);
+                                    b.appendChild(a)
+                                });
+                                b.style.minHeight = ""
+                            }
+                            var c = this,
+                                d = [];
+                            c.update = function() {
+                                if (c.items[0]) {
+                                    b.classList.add("tinyMasonryLoaded");
+                                    d[0] && (b.style.minHeight = b.clientHeight + "px");
+                                    var a = c.items[0];
+                                    a.style.width = "";
+                                    a.parentNode && a.parentNode.parentNode === b ? g(a) : (b.appendChild(a), setTimeout(g.bind(0, a)))
+                                }
+                            };
+                            c.items = [].slice.call(b.children);
+                            c.update();
+                            window.addEventListener("resize", c.update)
+                        };
+
+                    </script>
+                    <script>
+                        var loader = document.querySelector(".loader")
+                        var grid = document.querySelector(".grid")
+                        var masonry = new TinyMasonry(grid)
+
+                        var loading = false
+
+                        function createPicture() {
+                            var width = 400
+                            var height = Math.round(Math.random() * 400 + 200)
+                            var picture = document.createElement("picture")
+                            picture.classList.add("gridItem")
+                            picture.style.paddingBottom = height / width * 100 + "%"
+                            var image = document.createElement("img")
+                            image.src = "https://unsplash.it/" + width + "/" + height + "?random"
+                            if (!image.complete) {
+                                image.addEventListener("load", function(picture) {
+                                    picture.classList.add("loaded")
+                                }.bind(null, picture))
+                            } else {
+                                picture.classList.add("loaded")
+                            }
+                            picture.appendChild(image)
+                            return picture
+                        }
+
+                        function loadMore() {
+                            var inViewport = loader.getBoundingClientRect().top < window.innerHeight
+                            if (!loading && inViewport) {
+                                loading = true
+                                for (var i = 16; i--;) {
+                                    var picture = createPicture()
+                                    masonry.items.push(picture)
+                                }
+                                masonry.update()
+                                loading = false
+                            }
+                        }
+                        window.addEventListener("scroll", loadMore)
+                        window.addEventListener("resize", loadMore)
+                        loadMore()
+
+                    </script>
+                    <div class="section-rtimg">
+
+                        <figure id="fullimagecontainer"></figure>
+                        <div id="javascript-gallery" tabindex="0">
+                            <a href="https://www.carsbikesyou.com/wp-content/uploads/2018/02/3.jpg">
+                              <img src="https://www.carsbikesyou.com/wp-content/uploads/2018/02/3.jpg" alt="Otzarreta Forest, Bizkaia, Spain">
+                            </a>
+                            <a href="https://i.ytimg.com/vi/MrqPPi-Ce6w/maxresdefault.jpg">
+                              <img src="https://i.ytimg.com/vi/MrqPPi-Ce6w/maxresdefault.jpg" alt="Otzarreta Forest, Bizkaia, Spain">
+                            </a>
+                            <a href="https://i.ytimg.com/vi/9tmsKRLweV8/maxresdefault.jpg">
+                              <img src="https://i.ytimg.com/vi/9tmsKRLweV8/maxresdefault.jpg" alt="Gorbea Natural Park, Spain">
+                            </a>
+                            <a href="https://i.ytimg.com/vi/xYCSW6cx6lM/maxresdefault.jpg">
+                              <img src="https://i.ytimg.com/vi/xYCSW6cx6lM/maxresdefault.jpg" alt="Otzarreta Forest, Bizkaia, Spain">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <style>
+                    div#javascript-gallery {
+                        background: black;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                    }
+
+                    figure {
+                        margin: 0;
+                    }
+
+                    div#javascript-gallery a {
+                        flex: 1 1 1%;
+                        transition: .3s;
+                        padding: 4px 2px;
+                        outline: none;
+                    }
+
+                    div#javascript-gallery a:hover,
+                    div#javascript-gallery a:focus {
+                        opacity: 0.8;
+                    }
+
+                    .section-rtimg img {
+                        width: 100%;
+                        border-radius: 6px;
+                        height: auto;
+                    }
+
+                    .section-rtimg {
+                        max-width: 700px;
+                        padding: 1rem 1rem;
+                        width: 50%;
+                        font-size: 0;
+                    }
+
+                </style>
+
+                <script>
+                    function handler(e) {
+                        e.preventDefault();
+                        largeimage.setAttribute("src", this.getAttribute("href"));
+                        largeimage.setAttribute("alt", this.querySelector("img").getAttribute("alt"));
+                        largeimage.animate([{
+                                opacity: '0'
+                            },
+                            {
+                                opacity: '1'
+                            }
+                        ], {
+                            duration: 500
+                        });
+                    }
+
+                    var jgallery = document.getElementById("javascript-gallery"),
+                        largeimagecontainer = document.getElementById("fullimagecontainer"),
+                        links = jgallery.getElementsByTagName('a'),
+                        largeimage = document.createElement("img");
+
+                    largeimage.setAttribute("id", "fullimage");
+                    largeimagecontainer.appendChild(largeimage);
+
+                    for (var i = 0; i < links.length; i++) {
+                        links[i].onclick = handler;
+                    }
+
+                    links[0].focus();
+                    links[0].click();
+
+                </script>
+
+            </section>
+            <section id="three" style="display: none;">
+                <div>
+                    <div class="vod_lst">
+                        <ul>
+
+                            <li>
+                                <a href="/artist/videoPlayer.nhn?videoId=235896">
+                        <span class="thmb">
+                            <img src="https://musicmeta-phinf.pstatic.net/video/000/235/235896.jpg?type=w300&amp;v=20180807175907" alt="favOriTe">
+                            <span class="bdr"></span><span class="mask"></span><span class="ico vod"></span><span class="playtime">03:31</span>
+                        </span>
+                        <p class="detail">
+                            <strong class="tit">Favorite</strong>
+                            <em class="ico_rated12">Is using older than 12 years of age.</em>
+                        </p>
+                    </a>
+                                <span class="name">Loona</span>
+                                <span class="date">2018.08.07</span>
+
+                            </li>
+                            <li>
+                                <a href="/artist/videoPlayer.nhn?videoId=235896">
+                        <span class="thmb">
+                            <img src="https://musicmeta-phinf.pstatic.net/video/000/235/235896.jpg?type=w300&amp;v=20180807175907" alt="favOriTe">
+                            <span class="bdr"></span><span class="mask"></span><span class="ico vod"></span><span class="playtime">03:31</span>
+                        </span>
+                        <p class="detail">
+                            <strong class="tit">Favorite</strong>
+                            <em class="ico_rated12">Is using older than 12 years of age.</em>
+                        </p>
+                    </a>
+                                <span class="name">Loona</span>
+                                <span class="date">2018.08.07</span>
+
+                            </li>
+                            <li>
+                                <a href="/artist/videoPlayer.nhn?videoId=235896">
+                        <span class="thmb">
+                            <img src="https://musicmeta-phinf.pstatic.net/video/000/235/235896.jpg?type=w300&amp;v=20180807175907" alt="favOriTe">
+                            <span class="bdr"></span><span class="mask"></span><span class="ico vod"></span><span class="playtime">03:31</span>
+                        </span>
+                        <p class="detail">
+                            <strong class="tit">Favorite</strong>
+                            <em class="ico_rated12">Is using older than 12 years of age.</em>
+                        </p>
+                    </a>
+                                <span class="name">Loona</span>
+                                <span class="date">2018.08.07</span>
+
+                            </li>
+                            <li>
+                                <a href="/artist/videoPlayer.nhn?videoId=235896">
+                        <span class="thmb">
+                            <img src="https://musicmeta-phinf.pstatic.net/video/000/235/235896.jpg?type=w300&amp;v=20180807175907" alt="favOriTe">
+                            <span class="bdr"></span><span class="mask"></span><span class="ico vod"></span><span class="playtime">03:31</span>
+                        </span>
+                        <p class="detail">
+                            <strong class="tit">Favorite</strong>
+                            <em class="ico_rated12">Is using older than 12 years of age.</em>
+                        </p>
+                    </a>
+                                <span class="name">Loona</span>
+                                <span class="date">2018.08.07</span>
+
+                            </li>
+
+                            <li>
+                                <a href="/artist/videoPlayer.nhn?videoId=230189">
+                        <span class="thmb">
+                            <img src="https://musicmeta-phinf.pstatic.net/video/000/235/235896.jpg?type=w300&amp;v=20180807175907" alt="Egoist (Olivia Hye) (Feat. 진솔)">
+                            <span class="bdr"></span><span class="mask"></span><span class="ico vod"></span><span class="playtime">04:36</span>
+                        </span>
+                        <p class="detail">
+                            <strong class="tit">Egoist (olivia hye)</strong>
+                            <em class="ico_rated12">Is using older than 12 years of age.</em>
+                        </p>
+                    </a>
+                                <span class="name">The girl of the month</span>
+                                <span class="date">2018.03.30</span>
+
+                            </li>
+
+                            <li>
+                                <a href="/artist/videoPlayer.nhn?videoId=236409">
+                        <span class="thmb">
+                            <img src="https://musicmeta-phinf.pstatic.net/video/000/235/235896.jpg?type=w300&amp;v=20180807175907" alt="Hi High">
+                            <span class="bdr"></span><span class="mask"></span><span class="ico vod"></span><span class="playtime">03:27</span>
+                        </span>
+                        <p class="detail">
+                            <strong class="tit">Hi high</strong>
+                            <em class="ico_rated15">Use by the 15 or over.</em>
+                        </p>
+                    </a>
+                                <span class="name">The girl of the month</span>
+                                <span class="date">2018.08.20</span>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <style>
+                .vod_lst li .thmb .ico.vod {
+                    margin-left: -31px;
+                    top: 30px;
+                    left: 50%;
+                    width: 62px;
+                    height: 62px;
+                    background-position: 0 -120px;
+                    overflow: hidden;
+                    display: inline-block;
+                    font-size: 0;
+                    position: absolute;
+                    line-height: 900rem;
+                    background-image: url(https://ssl.pstatic.net/static/music/images/sp_mscn_v13.png);
+                    background-repeat: no-repeat;
+                    vertical-align: middle;
+                }
+
+                .vod_lst {
+                    overflow: hidden;
+                }
+
+                .vod_lst ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0.25rem 0;
+                }
+
+                .vod_lst li .detail {
+                    height: 22px;
+                }
+
+                .vod_lst li .tit {
+                    max-width: 206px;
+                    display: inline-block;
+                    color: #00b130;
+                    font-size: 15px;
+                    vertical-align: middle;
+                }
+
+                .ico_rated15 {
+                    width: 13px;
+                    height: 13px;
+                    background-position: -170px -165px;
+                    overflow: hidden;
+                    display: inline-block;
+                    font-size: 0;
+                    line-height: 900em;
+                    background-image: url(https://ssl.pstatic.net/static/music/images/sp_mscn_v13.png);
+                    background-repeat: no-repeat;
+                    vertical-align: middle;
+                }
+
+                .vod_lst li .thmb .playtime {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 95px;
+                    text-align: center;
+                    color: #fff;
+                }
+
+                .sp_muc,
+                .ico_hd,
+                .ico_tvcast,
+                .ico_ratedall,
+                .ico_rated12,
+                .ico_rated15,
+                .ico_rated18,
+                .ico_rated19,
+                .talk_lst .view_more .ico {
+                    overflow: hidden;
+                    display: inline-block;
+                    font-size: 0;
+                    line-height: 900em;
+                    background-image: url(https://ssl.pstatic.net/static/music/images/sp_mscn_v13.png);
+                    background-repeat: no-repeat;
+                    vertical-align: middle;
+                }
+
+                .thmb .ico {
+                    position: absolute;
+                }
+
+                .thmb .mask {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: #000;
+                    opacity: 0.2;
+                    filter: Alpha(Opacity=20);
+                }
+
+                .thmb .bdr {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border: 1px solid #000;
+                    opacity: 0.05;
+                    filter: Alpha(Opacity=5);
+                }
+
+                .vod_lst li .thmb {
+                    margin-bottom: 6px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .thmb {
+                    position: relative;
+                    display: block;
+                    overflow: hidden;
+                }
+
+                .vod_lst li {
+                    width: 20%;
+                    min-width: 250px;
+                    max-width: 300px;
+                    flex-grow: 1;
+                    padding: 0.4rem;
+                    line-height: 20px;
+                }
+
+                .vod_lst li a {
+                    cursor: pointer;
+                    text-decoration: none !important;
+                }
+
+                .vod_lst li .name,
+                .vod_lst li .date {
+                    display: block;
+                    color: #333131;
+                }
+
+            </style>
+            <section id="four" style="display: none;">
+                <div class="panel">
+                    <div class="flexy">
+                        <div class="kiwi">
+                            <h1 class="heading1" id="zero">The Lord of the Rings</h1>
+                            <ol class="chapter">
+                                <li class="affix" style="font-weight: bold; font-size: 1.2rem">Contents</li>
+                                <li class="affix"><a href="#zero" class="active" tabindex="0"> Introduction</a></li>
+                                <li><a href="#one" tabindex="0"><strong aria-hidden="true">1.</strong> Development</a></li>
+                                <li><a href="#two" tabindex="0"><strong aria-hidden="true">2.</strong> Response</a></li>
+                                <li><a href="#three" tabindex="0"><strong aria-hidden="true">3.</strong> Change from Book</a></li>
+                                <li>
+                                    <ol class="section">
+                                        <li><a href="#four" tabindex="0"><strong aria-hidden="true">3.1.</strong> Tourism</a></li>
+                                        <li><a href="#seemore" tabindex="0"><strong aria-hidden="true">3.2.</strong> See More</a></li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <p>The Lord of the Rings is a film series of three epic fantasy adventure films directed by Peter Jackson, based on the novel The Lord of the Rings by J. R. R. Tolkien. The films are subtitled The Fellowship of the Ring (2001), The Two Towers (2002) and The Return of the King (2003). They are a New Zealand-American venture, produced by WingNut Films and The Saul Zaentz Company and distributed by New Line Cinema.</p>
+                            <p>Set in the fictional world of Middle-earth, the films follow the hobbit Frodo Baggins (Elijah Wood) as he and the Fellowship embark on a quest to destroy the One Ring, to ensure the destruction of its maker, the Dark Lord Sauron. The Fellowship eventually splits up and Frodo continues the quest with his loyal companion Sam (Sean Astin) and the treacherous Gollum (Andy Serkis). Meanwhile, Aragorn (Viggo Mortensen), heir in exile to the throne of Gondor, along with Legolas (Orlando Bloom), Gimli (John Rhys-Davies), Merry (Dominic Monaghan), Pippin (Billy Boyd) and the wizard Gandalf (Ian McKellen), unite to rally the Free Peoples of Middle-earth in the War of the Ring in order to aid Frodo by weakening Sauron's forces.</p>
+                            <h2 class="underline--magical" id="one">Development</h2>
+                            <p>Jackson decided to move ahead with King Kong before filming The Lord of the Rings, prompting Universal to enter a deal with Miramax to receive foreign earnings from The Lord of the Rings while Miramax received foreign earnings from King Kong.[18] It was also revealed that Jackson originally wanted to finish King Kong before The Lord of the Rings began. But due to location problems, he decided to start with The Lord of the Rings franchise instead. When Universal cancelled King Kong in 1997,[19] Jackson and Walsh immediately received support from Weinstein and began a six-week process of sorting out the rights. </p>
+                            <p>Jackson and Walsh asked Costa Botes to write a synopsis of the book and they began to re-read the book. Two to three months later, they had written their treatment.[20] The first film would have dealt with what would become The Fellowship of the Ring, The Two Towers, and the beginning of The Return of the King, ending with Saruman's death, and Gandalf and Pippin going to Minas Tirith. In this treatment, Gwaihir and Gandalf visit Edoras after escaping Saruman, Gollum attacks Frodo when the Fellowship is still united, and Farmer Maggot, Glorfindel, Radagast, Elladan and Elrohir are present. Bilbo attends the Council of Elrond, Sam looks into Galadriel's mirror, Saruman is redeemed before he dies and the Nazgûl just make it into Mount Doom before they fall.[20] They presented their treatment to Harvey and Bob Weinstein, the latter of whom they focused on impressing with their screenwriting as he had not read the book. They agreed upon two films and a total budget of $75 million.</p>
+                            <p>The Sumerians also knew of Mercury since at least 5,000 years ago. It was often associated with Nabu, the god of writing. Mercury was also given separate names for its appearance as both a morning star and as an evening star. Greek astronomers knew, however, that the two names referred to the same body, and Heraclitus, around 500 B.C., correctly thought that both Mercury and Venus orbited the sun, not Earth.</p>
+                            <h2 class="underline--magical" id="two">Public and critical response </h2>
+                            <p>Unadjusted for inflation, The Lord of the Rings film series is the highest-grossing film trilogy worldwide of all time, higher even than other film franchises such as the original Star Wars trilogy and The Godfather trilogy.[61] The film series grossed a total of $2.918 billion[d] and also tied a record with Ben-Hur (1959) and Titanic (1997) for the total number of Academy Awards won for a single film, with The Return of the King receiving eleven Oscars.[62] The majority of critics have also praised the series, with Kenneth Turan of the Los Angeles Times writing that "the trilogy will not soon, if ever, find its equal".[63] Some were critical of the films' pacing and length: "It's a collection of spectacular set pieces without any sense of momentum driving them into one another" according to Philadelphia Weekly</p>
+                            <h2 class="underline--magical" id="three">Reactions to changes in the films from the books</h2>
+                            <p>Various changes to characters such as Gandalf, Aragorn, Arwen, Denethor, Faramir, Gimli, and Frodo, when considered together, were seen by some to alter the tone and themes found in the books. Several critics contend that the portrayal of women, especially Arwen, in the films is thematically faithful to (or compatible with) Tolkien's writings despite some differences. Wayne G. Hammond, a Tolkien scholar,[88][89] said of the first two films that he found them to be "travesties as adaptations... faithful only on a basic level of plot" and that many characters had not been depicted faithfully to their appearance in the novel. Other critics have argued that Tolkien's characters were weakened and misinterpreted by their portrayal in the films. Changes to events (such as the Elves participating at the Battle of Helm's Deep,[95] </p>
+                            <p>Faramir taking the hobbits to Osgiliath,[96] and the deletion of the chapter "The Scouring of the Shire") are also seen as changing Tolkien's themes.[96] Janet Brennan Croft criticized the films using Tolkien's own terms "anticipation" and "flattening", which she used in critiquing a proposed film script. She contrasts Tolkien's subtlety with Jackson's tendency to show "too much too soon".[97] Supporters of the series assert that it is a worthy interpretation of the book and that most of the changes were necessary.[30] Many who worked on the series are fans of the book, including Christopher Lee, who (alone among the cast) had actually met Tolkien in person,[98] and Boyens once noted that no matter what, it is simply their interpretation of the book. Jackson once said that to simply summarize the story on screen would be a mess, and in his own words, "Sure, it's not really The Lord of the Rings... but it could still be a pretty damn cool movie."[99][100] </p>
+                            <h2 class="underline--magical" id="four">Effects on the film industry and tourism</h2>
+                            <p>As a result of the series' success, Peter Jackson has become a major figure in the film business (sometimes called a mogul) in the mold of Steven Spielberg and George Lucas, in the process befriending some industry heavyweights like Bryan Singer and Frank Darabont. Jackson has since founded his own film production company, Wingnut Films, as well as Wingnut Interactive, a video game company. He was also finally given a chance to remake King Kong in 2005. The film was a critical and box office success, although not as successful as The Lord of the Rings series. Jackson has been called a "favourite son" of New Zealand.[110] In 2004, Howard Shore toured with The Lord of the Rings Symphony, playing two hours of the score. Along with the Harry Potter films, the series has renewed interest in the fantasy film genre. Tourism for New Zealand is up, possibly due to its exposure in the series,[111] with the country's tourism industry waking up to an audience's familiarity.</p>
+                            <h2 class="underline--magical" id="seemore">See Also</h2>
+                            <div class="socializing">
+                                <span>#Linkedin</span>
+                                <span>#Behance</span>
+                                <span>#Github</span>
+                                <span>#Dribbble</span>
+                                <span>#Codepen</span>
+                            </div>
+                        </div>
+                        <table class="infobox">
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" style="text-align: center;background: #f9f9f9;color: #000000;font-size: 1.6rem;"> <b>The Lord of the Rings</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align: center;"><a href="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/The_Lord_of_the_Rings_trilogy_poster.jpg/220px-The_Lord_of_the_Rings_trilogy_poster.jpg" class="image image-thumbnail"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/The_Lord_of_the_Rings_trilogy_poster.jpg/220px-The_Lord_of_the_Rings_trilogy_poster.jpg" alt="Jisoo Square Up Infobox" class="lzyPlcHld lzyTrns lzyLoaded" data-image-key="Jisoo_Square_Up_Infobox.jpg" data-image-name="Jisoo Square Up Infobox.jpg" data-src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/The_Lord_of_the_Rings_trilogy_poster.jpg/220px-The_Lord_of_the_Rings_trilogy_poster.jpg" width="100%"></a><br><i style="font-size: 13px;">Jisoo "<a href="/wiki/Square_Up_(mini-album)" title="Square Up (mini-album)" class="mw-redirect">Square Up</a>" Promotional Picture</i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align: center; background: #f0f0f0; color: #000000; font-size: 95%;"><b>Basic Information</b>
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align: top;">
+                                    <td style="vertical-align: top;"> <b>Birth name:</b> </td>
+                                    <td>
+                                        <p>Kim Jisoo
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align: top;">
+                                    <td style="vertical-align: top;"> <b>Hangul:</b> </td>
+                                    <td>
+                                        <p>김지수
+                                        </p>
+                                    </td>
+                                </tr>
+
+
+                                <tr style="vertical-align: top;">
+                                    <td style="vertical-align: top;"> <b>Other Names:</b> </td>
+                                    <td>
+                                        <p>Chi Choo<br>Jichu
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align: top;">
+                                    <td style="vertical-align: top;"> <b>Birth date:</b> </td>
+                                    <td>
+                                        <p>January 3, 1995<span style="display:none"> (<span class="bday">1995-01-03</span>)</span><span class="noprint"> (age 23)</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align:">
+                                    <td style="vertical-align: top;"> <b>Birth place:</b> </td>
+                                    <td>
+                                        <p><a href="http://en.wikipedia.org/wiki/Seoul" class="extiw" title="wikipedia:Seoul">Seoul, South Korea</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align:">
+                                    <td style="vertical-align: top;"> <b>Height:</b> </td>
+                                    <td>
+                                        <p>162 cm (5'3")
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align:">
+                                    <td style="vertical-align: top;"> <b>Weight:</b> </td>
+                                    <td>
+                                        <p>45 kg (99 lbs)
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align:">
+                                    <td style="vertical-align: top;"> <b>Blood type:</b> </td>
+                                    <td>
+                                        <p>A
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align: center; background: #f0f0f0; color: #000000; font-size: 95%;"><b>Occupation</b>
+                                    </td>
+                                </tr>
+
+                                <tr style="vertical-align:">
+                                    <td style="vertical-align: top;"> <b>Job:</b> </td>
+                                    <td>
+                                        <p>Singer
+                                        </p>
+                                    </td>
+                                </tr>
+
+                                <tr style="vertical-align:">
+                                    <td style="vertical-align: top;"> <b>Position:</b> </td>
+                                    <td>
+                                        <p>Lead Vocalist &amp; Visual
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align:">
+                                    <td style="vertical-align: top;"> <b>Instrument(s):</b> </td>
+                                    <td>
+                                        <p>Drum, Guitar
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align:">
+                                    <td style="vertical-align: top;"> <b>Years active:</b> </td>
+                                    <td>
+                                        <p>2016–present
+                                        </p>
+                                    </td>
+                                </tr>
+
+                                <tr style="vertical-align:">
+                                    <td style="vertical-align: top;"> <b>Agency:</b> </td>
+                                    <td>
+                                        <p><a href="/wiki/YG_Entertainment" title="YG Entertainment">YG Entertainment</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align:">
+                                    <td style="vertical-align: top;"> <b>Associated acts:</b> </td>
+                                    <td>
+                                        <p><a href="/wiki/BLACKPINK" title="BLACKPINK">BLACKPINK</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align:">
+                                    <td style="vertical-align: top;"> <b>Signature:</b> </td>
+                                    <td>
+                                        <p><a href="https://vignette.wikia.nocookie.net/blinks/images/8/80/Jisoo%27s_Signature.PNG/revision/latest?cb=20180225214423" class="image image-thumbnail"><img src="https://vignette.wikia.nocookie.net/blinks/images/8/80/Jisoo%27s_Signature.PNG/revision/latest/scale-to-width-down/100?cb=20180225214423" alt="Jisoo&amp;#039;s Signature" class="lzyPlcHld lzyTrns lzyLoaded" data-image-key="Jisoo%27s_Signature.PNG" data-image-name="Jisoo's Signature.PNG" data-src="https://vignette.wikia.nocookie.net/blinks/images/8/80/Jisoo%27s_Signature.PNG/revision/latest/scale-to-width-down/100?cb=20180225214423" width="100" height="105" onload="if(typeof ImgLzy==='object'){ImgLzy.load(this)}"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script>
+            (function($) {
+
+                var tabs = $(".tabs li a");
+
+                tabs.click(function() {
+                    var content = this.hash.replace('/', '');
+                    tabs.removeClass("active");
+                    $(this).addClass("active");
+                    $("#content").find('section').hide();
+                    $(content).fadeIn(200);
+                });
+
+            })(jQuery);
+
+        </script>
+    </div>
+
+    <style>
+        .imigis {
+            display: flex;
+        }
+
+    </style>
+
+    <style>
+        ._1fgQj {
+            margin: 0.4rem 0.4rem;
+        }
+
+        ._2634o {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.18);
+            text-transform: capitalize;
+            display: block;
+            font-weight: 600;
+            transition: background-color .15s ease-in-out;
+            text-decoration: none;
+            padding: 10px;
+            color: #000000;
+        }
+
+        .x1MBX {
+            margin: 4px 4px;
+            overflow: hidden;
+            border-radius: 3px;
+            text-align: center;
+            /*flex-basis: 100px;*/
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            flex-shrink: 0;
+            max-width: 250px;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .R6-Wf {
+            flex-wrap: nowrap;
+            display: flex;
+            background: #ffffff;
+            overflow-x: visible;
+            overflow-y: hidden;
+        }
+
+        .R6-Wf::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        .R6-Wf::-webkit-scrollbar-thumb {
+            background-color: #555;
+        }
+
+        .R6-Wf div:nth-child(6n-5) {
+            background: #ecec84 url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-4) {
+            background: #ffb69b url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-3) {
+            background: #ffacbb url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-2) {
+            background: #8bc3e5 url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-1) {
+            background: #a299ca url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n) {
+            background: #7ccaae url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+    </style>
+
+    <style>
+        .panel h1 {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 10px 0 0 0;
+            letter-spacing: 3px;
+            top: 0;
+            padding: 10px 0 0 0;
+            width: 100%;
+            font-size: 24px;
+        }
+
+        .panel h1::after {
+            width: 100%;
+            height: 2px;
+            background: black;
+            display: block;
+            content: '';
+            margin-bottom: 20px;
+            margin-top: 8px;
+        }
+
+        .panel {
+            position: relative;
+            transition: all 0.2s;
+            color: black;
+            padding: 0px 40px 0px 40px;
+        }
+
+        .kiwi {
+            width: 70%;
+            padding: 0 1rem 0 0;
+        }
+
+        .heading1 {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 0 0 0 0;
+            letter-spacing: 3px;
+            top: 0;
+            padding: 20px 0 0 0;
+            width: 100%;
+            font-size: 26px;
+            font-family: "PT sans", sans-serif;
+        }
+
+        .kiwi h2 {
+            font-size: 17px;
+            text-transform: uppercase;
+            font-family: "PT sans", sans-serif;
+            font-weight: 600;
+            margin-top: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .kiwi h2::after {
+            width: 0px;
+            height: 0px;
+            background: black;
+            display: block;
+            content: '';
+            margin-top: 8px;
+        }
+
+        .kiwi p {
+            color: #555555;
+            font-size: 15px;
+            line-height: 24px;
+            text-align: justify;
+            word-spacing: 6px;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .underline--magical {
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.2em;
+            background-position: 0% 88%;
+            padding-bottom: 10px;
+            transition: background-size 0.25s ease-in;
+            display: inline;
+            margin-top: 1rem;
+        }
+
+        .magical_link {
+            background-image: linear-gradient(90deg, #2196F3 0%, #03A9F4 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.12em;
+            background-position: 0% 88%;
+            padding-bottom: 6px;
+            display: inline;
+        }
+
+        .infobox {
+            padding: 0.5rem;
+            font-size: 15px;
+            width: 30%;
+            padding: 2rem 1rem 0 2rem;
+        }
+
+        .infobox b {
+            line-height: 2rem;
+            font-weight: bold;
+        }
+
+        .infobox p {
+            line-height: 2rem;
+        }
+
+        .flexy {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .socializing span {
+            font-size: 16px;
+            display: table;
+            padding: 0.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-family: "Roboto mono";
+            color: #0027ff;
+            margin: 0.4rem;
+        }
+
+        .chapter {
+            list-style: none outside none;
+            width: 180px;
+            padding: 0.5rem;
+            line-height: 2em;
+            float: right;
+            position: sticky;
+            margin: 0rem 0 0.5rem 0.8rem;
+            border: 2px solid;
+        }
+
+    </style>
+
+
+
+</body>
+
+</html>

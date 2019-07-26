@@ -1,0 +1,57 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset='UTF-8' />
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+</head>
+
+<body>
+    <script>
+        //        fetch('https://api.reddit.com/r/technology/top/?sort=top&t=all')
+        //fetch('https://api.reddit.com/r/all/new/?sort=new&t=all')
+        .then(res => res.json())
+            .then(res => res.data.children)
+            .then(res => res.map(post => ({
+                author: post.data.author,
+                link: post.data.url,
+                img: post.data.thumbnail,
+                title: post.data.title
+            })))
+            .then(res => res.map(render))
+            .then(res => console.log(res))
+        const app = document.querySelector('#app');
+        const render = post => {
+            const node = document.createElement('div');
+            node.innerHTML = `
+            <h2 class="raditechtwo">
+              <a href="${post.link}" class="raditae">
+                <img src="${post.img}" class="raditimg" />
+                <span class="raditspan">${post.title}</span>
+              </a>
+           </h2>`;
+            app.appendChild(node);
+        }
+
+    </script>
+
+    <style>
+        .raditechtwo {
+            margin-bottom: 0.4rem;
+            box-shadow: 1px 2px 10px #00000014;
+            background: #ffffff;
+        }
+
+        .raditae {
+            display: flex;
+            color: #000000;
+        }
+
+        .trdcon {
+            background: #ffffff;
+        }
+
+        .raditspan {
+            padding: 0 0.6rem;
+        }
+
+    </style>
+</body>

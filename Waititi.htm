@@ -1,0 +1,697 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" id="viewport" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="noimageindex, noarchive" name="robots">
+    <meta content="yes" name="mobile-web-app-capable">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-weight: 400;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /*        background: #ffffff url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-colorful.png);*/
+        }
+
+        /*
+        body:before {
+            background-image: url(file:///C:/Users/me/Desktop/Fotolia_115715579_Subscription_Monthly_XXL.jpg);
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            content: '';
+            background-position: center;
+            z-index: -1;
+        }
+*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            vertical-align: baseline;
+            list-style-type: none;
+            border: 0;
+            outline: 0;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div class="row">
+        <div class="topright">
+            <svg class="ticons" viewBox="0 0 92 92" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+        <path d="M46 57.1c14.8 0 26.9-12.1 26.9-27 0-15-12.1-27.1-26.9-27.1s-26.9 12.1-26.9 27c0 15 12.1 27.1 26.9 27.1zm0-46.1c10.4 0 18.9 8.5 18.9 19s-8.5 19-18.9 19-18.9-8.5-18.9-19 8.5-19 18.9-19zm12.5 48.7c-1.3-.4-2.8-.1-3.8.8l-8.7 7.4-8.7-7.4c-1.1-.9-2.5-1.2-3.8-.8-5.6 1.8-33.5 11.4-33.5 25.3 0 2.2 1.8 4 4 4h84c2.2 0 4-1.8 4-4 0-13.9-27.9-23.5-33.5-25.3zm-48.4 21.3c4.4-4.7 15-9.9 23.8-12.9l9.5 8.1c1.5 1.3 3.7 1.3 5.2 0l9.5-8.1c8.8 3.1 19.4 8.3 23.8 12.9h-71.8z"></path>
+        </svg>
+        </div>
+        <form class="form-inline " id="search-form" name="search-form" onsubmit="return search()">
+            <div width="100%" class="form_container">
+                <div class="d3" style="width:100%;">
+                    <input class="form-control search-field" type="search" id="query" style="width:100%;" placeholder="Search">
+                </div>
+                <button class="search-btn" type="submit" id="search-btn" name="search-btn">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 57.966 57.966" class="srchicon">
+                      <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path>
+                   </svg>                </button>
+            </div>
+        </form>
+        <div class="hidemob">
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+         </svg>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+             </svg>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+            <svg class="pincodeMain" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" x="0px" y="0px">
+                <g id="art">
+                   <image id="image" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://vignette.wikia.nocookie.net/loonatheworld/images/6/6d/Yves_debut_photo_6.png/revision/latest/scale-to-width-down/350?cb=20171120144804" preserveAspectRatio="xMidYMid slice"></image>
+                </g>
+             </svg>
+
+        </div>
+
+    </div>
+    <style>
+        #image {
+            width: 100%;
+            height: auto;
+        }
+
+        .pincodemain {
+            fill: none;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.37);
+            border-radius: 8px;
+            background: #fff;
+            padding: 2px;
+            stroke: #1ed760;
+        }
+
+        .topright {
+            align-self: center;
+        }
+
+    </style>
+    <ul class="tabs">
+        <li><a class="active" href="#/one">Web</a></li>
+        <li><a class="" href="#/two">Images</a></li>
+        <li><a class="" href="#/three">Videos</a></li>
+        <li><a class="" href="#/four">Wiki</a></li>
+    </ul>
+
+    <style>
+        @media screen and (max-width: 600px) {
+            ul.tabs li a span {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1199px) and (min-width: 601px) {
+            ul.tabs li a span {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {}
+
+    </style>
+
+    <style>
+        ul.tabs {
+            margin: 0 auto;
+            display: flex;
+            list-style: none;
+            overflow: hidden;
+            padding: 0;
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+            position: sticky;
+            /* box-shadow: 0px -4px 12px #00000054; */
+        }
+
+        ul.tabs::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        ul.tabs li {
+            padding: 0px 0.6rem;
+        }
+
+        ul.tabs li a {
+            position: relative;
+            display: block;
+            padding: 8px 10px 8px 10px;
+            font-family: 'Roboto Mono', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+            text-align: center;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        ul.tabs li a.active {
+            z-index: 4;
+            outline: none;
+            border-bottom: 3px solid #ffdd00;
+        }
+
+        #content {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+    </style>
+    <div class="wrap">
+
+        <div id="content">
+            <section id="one" style="">
+                <div>Thabs , consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur modi quod quo iureq</div>
+            </section>
+            <section id="two" style="display: none;">
+                <div class="_1fgQj">
+                    <div class="_2Ru_P">
+                        <div class="_3b4NQ">
+                            <div class="R6-Wf">
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/bird">HTML5</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/flowers">CSS3</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/animal">JavaScript</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">SVG</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/parrot">C++</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/eagle">Python</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/nature">Rust</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Gravit</a>
+                                </div>
+                                <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">UI/UX</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="three" style="display: none;">
+                <div>Thabs , consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur modi quod quo iureq</div>
+            </section>
+            <section id="four" style="display: none;">
+                <div>Thabs , consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur modi quod quo iureq</div>
+            </section>
+            <section id="five" style="display: none;">
+                <div>Thabs , consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur modi quod quo iureq</div>
+            </section>
+            <section id="six" style="display: none;">
+                <div>Thabs , consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur modi quod quo iureq</div>
+            </section>
+            <section id="seven" style="display: none;">
+                <div>Thabs , consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur modi quod quo iureq</div>
+            </section>
+        </div>
+        <script>
+            (function($) {
+
+                var tabs = $(".tabs li a");
+
+                tabs.click(function() {
+                    var content = this.hash.replace('/', '');
+                    tabs.removeClass("active");
+                    $(this).addClass("active");
+                    $("#content").find('section').hide();
+                    $(content).fadeIn(200);
+                });
+
+            })(jQuery);
+
+        </script>
+    </div>
+
+    <style>
+        ._1fgQj {
+            margin: 0.4rem 0.4rem;
+        }
+
+        ._2634o {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.18);
+            text-transform: capitalize;
+            display: block;
+            font-weight: 600;
+            transition: background-color .15s ease-in-out;
+            text-decoration: none;
+            padding: 14px;
+            color: #000000;
+        }
+
+        .x1MBX {
+            margin: 4px 4px;
+            overflow: hidden;
+            border-radius: 3px;
+            text-align: center;
+            /*flex-basis: 100px;*/
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            flex-shrink: 0;
+            max-width: 250px;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .R6-Wf {
+            flex-wrap: nowrap;
+            display: flex;
+            background: #ffffff;
+            overflow-x: visible;
+            overflow-y: hidden;
+        }
+
+        .R6-Wf::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        .R6-Wf::-webkit-scrollbar-thumb {
+            background-color: #555;
+        }
+
+        .R6-Wf div:nth-child(6n-5) {
+            background: #ecec84 url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-4) {
+            background: #ffb69b url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-3) {
+            background: #ffacbb url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-2) {
+            background: #8bc3e5 url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-1) {
+            background: #a299ca url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n) {
+            background: #7ccaae url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+    </style>
+
+    <style>
+        .d3 {
+            border-radius: 5px;
+        }
+
+
+
+        .row {
+            position: sticky;
+            display: flex;
+            background: #ffffff;
+            justify-content: space-between;
+            z-index: 1;
+            width: 100%;
+            top: 0px;
+            box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.08);
+            padding: 0.2rem;
+        }
+
+        @media screen and (max-width: 600px) {
+            .ticons {
+                display: block;
+                margin: 0px 0.4rem 0 0;
+                filter: drop-shadow(1px 0px 5px #00c73c);
+                height: 3rem;
+            }
+            .hidemob {
+                display: none;
+            }
+            .form-inline {
+                width: 100%;
+            }
+            .srchicon {
+                width: 2rem;
+                height: 2rem;
+            }
+            .search-field {
+                font-size: 1.2rem;
+                height: 2.8rem;
+                padding: 0rem 0.4rem;
+            }
+            .search-btn {
+                height: 2.8rem;
+                padding: 0rem 0.4rem;
+            }
+            .pincodemain {
+                margin: 0px 0.4rem 0 0.2rem;
+                width: 2.9rem !important;
+                height: 2.9rem !important;
+            }
+        }
+
+        @media screen and (max-width: 1199px) and (min-width: 601px) {
+            .ticons {
+                display: block;
+                margin: 4px 0.4rem;
+                height: 3rem;
+            }
+            .form-inline {
+                width: 100%;
+            }
+            .hidemob {
+                display: flex;
+            }
+            .srchicon {
+                width: 2.2rem;
+                height: 2.2rem;
+                margin-top: -0.2rem;
+            }
+            .search-field {
+                height: 3rem;
+                font-size: 1.3rem;
+                padding: 0rem 0.8rem;
+            }
+            .search-btn {
+                height: 3rem;
+                padding: 0rem 0.5rem;
+            }
+            .pincodemain {
+                margin: 0px 1rem;
+                width: 3.1rem !important;
+                height: 3.1rem !important;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            body::-webkit-scrollbar {
+                width: 12px;
+            }
+            body::-webkit-scrollbar-thumb {
+                background-color: #555;
+            }
+            .ticons {
+                display: block;
+                margin: 4px 1rem;
+                height: 3rem;
+            }
+            .hidemob {
+                display: flex;
+            }
+            .form-inline {
+                width: 100%;
+            }
+            .srchicon {
+                width: 2.2rem;
+                height: 2.2rem;
+                margin-top: -0.3rem;
+            }
+            .search-field {
+                height: 3.2rem;
+                padding: 0rem 1.2rem;
+                font-size: 1.4rem;
+            }
+            .search-btn {
+                height: 3.2rem;
+                padding: 0rem 0.6rem;
+            }
+            .pincodemain {
+                margin: 2px 1rem;
+                width: 3.3rem !important;
+                height: 3.3rem !important;
+            }
+        }
+
+        .ticons {
+            fill: none;
+            stroke-width: 2;
+            stroke: #00000052;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+
+        .hidemob {
+            align-self: center;
+        }
+
+        .form-inline {
+            align-self: center;
+            width: 100%;
+            max-width: 700px;
+            position: sticky;
+        }
+
+        .form_container {
+            display: flex;
+            background: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19); */
+            align-items: center;
+        }
+
+        .search-btn {
+            background-color: rgb(0, 0, 0);
+            border: none;
+            outline: none;
+            border-radius: 0 4px 4px 0;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
+        }
+
+        .search-field {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 4px;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+            padding: 0.2rem 1.3rem;
+            background: rgba(0, 0, 0, 0.06);
+            color: #000;
+            font-size: 1.1rem;
+            /* box-shadow: 0px 0px 0px 3px rgb(0, 0, 0); */
+        }
+
+        .srchicon {
+            fill: #ffffff;
+            margin: 0.01rem 0.1rem;
+        }
+
+    </style>
+    <style>
+        #notes {
+            padding: 26px 40px 0px 40px;
+            max-width: 700px;
+        }
+
+        .note {
+            min-height: 45px;
+            border-radius: 1px;
+            cursor: pointer;
+            transition: transform .5s;
+            padding: 10px;
+            background: #fff;
+            margin: 0.3rem;
+        }
+
+        .note:hover {}
+
+        #notes>div:nth-child(n+1) {
+            margin-bottom: 0px;
+        }
+
+        #notes>div:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+
+        .note span {
+            vertical-align: top;
+            color: #1d00cc;
+        }
+
+        .note span.green {
+            color: #0ca90c;
+            font-weight: 400;
+            line-height: 24px;
+            font-size: 20px;
+        }
+
+        .note .line.med {
+            font-size: 15px;
+        }
+
+        .note .line.small {
+            color: #000000;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .note .line.large {
+            margin-top: 2px;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        #no-cards {
+            display: none;
+            margin-top: 5px;
+        }
+
+    </style>
+    <div class="containing">
+        <div id="notes">
+            <div class="note">
+                <div class="line"><span class="green">Allkpop | Breaking K-pop news, videos, photos and celebrity ...</span></div>
+                <div class="line small mt">Breaking K-pop news, videos, photos and celebrity gossip | allkpop</div>
+                <div class="line med mt"><span>https://www.allkpop.com</span></div>
+            </div>
+
+            <div class="note">
+                <div class="line"><span class="green">K-Pop - Topic - YouTube</span></div>
+                <div class="line small mt">K-pop is a music genre originating in South Korea that is characterized by a wide variety of audiovisual elements. Although it includes all genres of "popula...</div>
+                <div class="line med mt"><span>youtube.com/music/kpop</span></div>
+
+            </div>
+            <div class="note">
+                <div class="line"><span class="green">Koreaboo — breaking k-pop news, photos and viral videos</span></div>
+                <div class="line small mt">Find breaking k-pop news, korean viral videos and exclusive content from the biggest k-pop idols. Creators of KCON and biggest k-pop site in the world.</div>
+                <div class="line med mt"><span>koreaboo.com</span></div>
+
+            </div>
+            <div class="note">
+                <div class="line"><span class="green">32,000+ Free Kpop music playlists | 8tracks radio</span></div>
+                <div class="line small mt">8tracks radio. Online, everywhere. - stream 32,000+ kpop playlists including korean, f(x), and shinee music from your desktop or mobile device.</div>
+                <div class="line med mt"><span>yahoo.com/style/tagged/food</span></div>
+
+            </div>
+            <div class="note">
+                <div class="line"><span class="green">1 Million pins about KPOP | Pinterest</span></div>
+                <div class="line small mt">Find photos of your favourite KPOP idols on Pinterest...</div>
+                <div class="line med mt"><span>pinterest.com/categories/kpop</span></div>
+
+            </div>
+            <div id="no-cards">
+                <div class="line">No cards</div>
+            </div>
+        </div>
+
+
+        <div class="panel">
+            <h1>Mercury</h1>
+            <p>Mercury is the closest planet to the sun. As such, it circles the sun faster than all the other planets, which is why Romans named it after their swift-footed messenger god.</p>
+            <p>The Sumerians also knew of Mercury since at least 5,000 years ago. It was often associated with Nabu, the god of writing. Mercury was also given separate names for its appearance as both a morning star and as an evening star. Greek astronomers knew, however, that the two names referred to the same body, and Heraclitus, around 500 B.C., correctly thought that both Mercury and Venus orbited the sun, not Earth.</p>
+            <img src="https://i2.wp.com/www.astronomytrek.com/wp-content/uploads/2012/11/mercury-1.jpg?fit=678%2C381&amp;ssl=1">
+            <h2>A year on Mercury is just 88 days long.</h2>
+            <p>One solar day (the time from noon to noon on the planetâ€™s surface) on Mercury lasts the equivalent of 176 Earth days while the sidereal day (the time for 1 rotation in relation to a fixed point) lasts 59 Earth days. Mercury is nearly tidally locked to the Sun and over time this has slowed the rotation of the planet to almost match its orbit around the Sun. Mercury also has the highest orbital eccentricity of all the planets with its distance from the Sun ranging from 46 to 70 million km.</p>
+            <h2>Mercury is the smallest planet in the Solar Systm.</h2>
+            <p>One of five planets visible with the naked eye a, Mercury is just 4,879 Kilometres across its equator, compared with 12,742 Kilometres for the Earth.</p>
+            <h2>Mercury is the second densest planet.</h2>
+            <p>Even though the planet is small, Mercury is very dense. Each cubic centimetre has a density of 5.4 grams, with only the Earth having a higher density. This is largely due to Mercury being composed mainly of heavy metals and rock.</p>
+            <h2>Mercury has wrinkles.</h2>
+            <p>As the iron core of the planet cooled and contracted, the surface of the planet became wrinkled. Scientist have named these wrinkles, Lobate Scarps. These Scarps can be up to a mile high and hundreds of miles long.</p>
+            <br>
+        </div>
+    </div>
+    <style>
+        .containing {
+            display: flex;
+        }
+
+        .panel {
+            position: relative;
+            width: 48%;
+            height: 100vh;
+            transition: all 0.2s;
+            color: black;
+            background: white;
+            padding: 0px 40px 0px 40px;
+        }
+
+        .panel h1 {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 0 0 0 0;
+            letter-spacing: 3px;
+            top: 0;
+            padding: 40px 0 0 0;
+            width: 100%;
+            font-size: 20px;
+        }
+
+        .panel h1::after {
+            width: 30px;
+            height: 2px;
+            background: black;
+            display: block;
+            content: '';
+            margin-bottom: 26px;
+            margin-top: 8px;
+        }
+
+        .panel p {
+            color: #909090;
+            font-size: 14px;
+            line-height: 20px;
+            font-family: "Roboto Mono";
+        }
+
+        .panel img {
+            margin-top: 0.6rem;
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        .panel h2::after {
+            width: 30px;
+            height: 2px;
+            background: black;
+            display: block;
+            content: '';
+            margin-top: 8px;
+        }
+
+        .panel h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+
+    </style>
+
+</body>
+
+</html>

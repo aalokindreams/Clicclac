@@ -1,0 +1,283 @@
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" id="viewport" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="noimageindex, noarchive" name="robots">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Noto+sans|Nanum+Gothic" rel="stylesheet">
+    <meta content="yes" name="mobile-web-app-capable">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: "Source sans pro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            vertical-align: baseline;
+            list-style-type: none;
+            border: 0;
+            outline: 0;
+        }
+
+    </style>
+</head>
+
+<script>
+    var viewbox = 'article.window';
+    var bToggle = '#btnMobile';
+
+
+    function fToggle() {
+        $(viewbox).toggleClass('small');
+        $(bToggle).toggleClass('active');
+    };
+
+    $(bToggle).click(function(e) {
+        e.preventDefault();
+        fToggle();
+    });
+
+    $(document).ready(function() {
+        fToggle();
+    });
+
+</script>
+<nav class="controls">
+    <a href="#" id="btnMobile">
+        <div class="logoicon">
+            <svg class="pincodemain" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" x="0px" y="0px">
+                <g id="art">
+                   <image id="image" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://vignette.wikia.nocookie.net/loonatheworld/images/6/6d/Yves_debut_photo_6.png/revision/latest/scale-to-width-down/350?cb=20171120144804" preserveAspectRatio="xMidYMid slice"></image>
+                </g>
+             </svg>
+        </div>
+    </a>
+</nav>
+<article class="window">
+    <ul class="page">
+        <li>
+            <a href="#">
+                <dl class="credits">
+                    <dt class="project">Project name</dt>
+                    <dd class="project">How DuckDuckGo is trying to help programmers</dd>
+                    <dt class="client">Client</dt>
+                    <dd class="client">duck.co</dd>
+                </dl>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <dl class="credits">
+                    <dt class="project">Project name</dt>
+                    <dd class="project">General Assembly's Data Science Course</dd>
+                    <dt class="client">Client</dt>
+                    <dd class="client">github.com</dd>
+                </dl>
+            </a>
+        </li>
+    </ul>
+</article>
+<style>
+    body {
+        background: #ccc;
+        height: 100%;
+        font-size: 1em;
+        line-height: 2.2em;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    a {
+        color: #333;
+    }
+
+    ul.page li a {
+        transition: all ease 200ms;
+    }
+
+    body,
+    ul.page,
+    dl.credits,
+    dl.credits dd,
+    dl.credits dt,
+    nav.controls ol,
+    nav.controls ol li {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul.page {
+        width: 100%;
+        display: flex;
+    }
+
+    ul.page li {
+        width: 50%;
+        overflow: visible;
+        list-style: none;
+    }
+
+    ul.page li a {
+        background: white;
+        display: block;
+        padding: 15px;
+    }
+
+    ul.page li a:hover {
+        background: yellow;
+    }
+
+    ul.page li:nth-child(1) a {
+        text-align: right;
+        background-repeat: no-repeat;
+        background-size: 28px;
+        background-position: 7% 20px;
+        border: none;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDBweCIgaGVpZ2h0PSIzNy4zMzRweCIgdmlld0JveD0iNzguMDY2IDkzLjUyMiA0MCAzNy4zMzQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgNzguMDY2IDkzLjUyMiA0MCAzNy4zMzQiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iIzJDMjIyNSIgZD0iTTc4LjA2NiwxMTIuMTEybDIwLjYwNi0xOC41OWwwLjA0LDAuMDUxbDAuMDIxLTAuMDJsMC45NzEsMS4xOTNsMS41MDQsMS43NzlsLTAuMDMsMC4wMjdsMC4wMywwLjA0DQoJbC0xNS4zODMsMTMuNjFoMzIuMjR2NC4yM0g4Ni4yMmwxNC45ODksMTMuMTk5bC0wLjExLDAuMTQxbDAuMTEsMC4wOThsLTIuNTM2LDIuOTg0TDc4LjA2OCwxMTIuMTh2LTAuMDY5Ii8+DQo8L3N2Zz4NCg==);
+    }
+
+    ul.page li:nth-child(1) a dl.credits dd.project {
+        display: inherit;
+    }
+
+    ul.page li:nth-child(1) a dl.credits dd.client {
+        display: block;
+    }
+
+    ul.page li:nth-child(1) a:hover {
+        background-position: 2% 20px;
+    }
+
+    ul.page li:nth-child(2) {
+        border-left: 1px solid #ccc;
+    }
+
+    ul.page li:nth-child(2) a {
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDBweCIgaGVpZ2h0PSIzNy4zMzRweCIgdmlld0JveD0iNzguMDY2IDkzLjUyMiA0MCAzNy4zMzQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgNzguMDY2IDkzLjUyMiA0MCAzNy4zMzQiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iIzJDMjIyNSIgZD0iTTExOC4wNjYsMTEyLjI2N2wtMjAuNjA2LDE4LjU5bC0wLjA0LTAuMDUxbC0wLjAyMSwwLjAxOWwtMC45NzEtMS4xOTNsLTEuNTA0LTEuNzhsMC4wMy0wLjAyN2wtMC4wMy0wLjA0DQoJbDE1LjM4My0xMy42MWgtMzIuMjR2LTQuMjNoMzEuODQ2TDk0LjkyNCw5Ni43NDVsMC4xMS0wLjE0MWwtMC4xMS0wLjA5N2wyLjUzNi0yLjk4NWwyMC42MDQsMTguNjc3djAuMDY5Ii8+DQo8L3N2Zz4NCg==);
+        background-repeat: no-repeat;
+        background-size: 28px;
+        background-position: 93% 20px;
+    }
+
+    ul.page li:nth-child(2) a:hover {
+        background-position: 98% 20px;
+    }
+
+    dl.credits {
+        overflow: visible;
+        display: inline-block;
+    }
+
+    dl.credits dd {
+        display: inline;
+    }
+
+    dl.credits dt {
+        display: none;
+    }
+
+    dl.credits dd.client {
+        font-size: 1em;
+    }
+
+    dl.credits dd.project {
+        margin: 0 0 45px 0;
+        display: block;
+        font-size: 1.8em;
+        font-weight: 600;
+        width: 70%;
+    }
+
+    article.window {
+        background: #ffeefa;
+        transition: all 900ms ease;
+        max-width: 700px;
+        margin: auto;
+        display: block;
+        padding: 0;
+        height: 100vh;
+    }
+
+    article.window.small {
+        max-width: 350px;
+    }
+
+    article.window.small ul.page {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    article.window.small ul.page li:nth-child(1),
+    article.window.small ul.page li:nth-child(2) {
+        width: 100%;
+        border-left: none;
+    }
+
+    article.window.small ul.page li:nth-child(2) {
+        order: 1;
+        border-bottom: 1px solid #ccc;
+    }
+
+    article.window.small ul.page li:nth-child(1) {
+        order: 2;
+    }
+
+    article.window dd.project {
+        margin: 0 0 45px -1px;
+        display: block;
+        font-size: 1.4em;
+        line-height: 1.25em;
+        font-weight: 600;
+        width: 65%;
+    }
+
+    nav.controls {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 99;
+        display: none;
+        max-width: 170px;
+        color: black;
+    }
+
+    nav.controls a {
+        text-align: center;
+        list-style: none;
+        font-size: 35px;
+        height: 70px;
+        width: 70px;
+        background: white;
+        border-radius: 4px;
+        display: table-cell;
+        vertical-align: middle;
+        color: blue;
+    }
+
+    nav.controls a.active {
+        background: blue;
+        color: white;
+    }
+
+    #image {
+        width: 100%;
+        height: auto;
+    }
+
+    .pincodemain {
+        /*background-image: url(https://vignette.wikia.nocookie.net/loonatheworld/images/6/6d/Yves_debut_photo_6.png/revision/latest/scale-to-width-down/350?cb=20171120144804);
+            box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.34);*/
+        border-radius: 4px;
+        fill: none;
+        margin: 0 0rem;
+        padding: 2px;
+        background: #ffffff;
+        box-shadow: 1px 2px 5px rgb(212, 212, 212);
+    }
+
+</style>

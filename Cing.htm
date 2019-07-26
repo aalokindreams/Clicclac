@@ -1,0 +1,648 @@
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" id="viewport" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="noimageindex, noarchive" name="robots">
+    <meta content="yes" name="mobile-web-app-capable">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,600,900%7CRoboto+Mono:300,400,500,700" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-weight: 400;
+            line-height: 1.6;
+            font-family: "Roboto mono", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #f0f0f0;
+            font-size: 16px;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            vertical-align: baseline;
+            list-style-type: none;
+            border: 0;
+            outline: 0;
+        }
+
+        input::placeholder {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000;
+            background: none;
+            font-weight: normal;
+            margin: 0;
+            overflow: hidden;
+            padding-bottom: 0.17em;
+            border-bottom: 1px solid #a2a9b1;
+        }
+
+    </style>
+</head>
+
+<style>
+    #image {
+        width: 100%;
+        height: auto;
+    }
+
+    .pincodemain {
+        fill: none;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.37);
+        border-radius: 50%;
+        background: #fff;
+        padding: 0px;
+        stroke: #1ed760;
+        margin: 0px 0.4rem 0 0.2rem;
+        width: 3rem !important;
+        height: 3rem !important;
+
+    }
+
+    .topright {
+        align-self: center;
+    }
+
+    .hidemob {
+        align-self: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .logo {
+        height: 3rem;
+        text-shadow: 1px 1px 5px #0aa701;
+    }
+
+    .logo span {
+        font-family: "Poiret One", cursive;
+        align-self: center;
+        font-weight: 600;
+        align-items: center;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+</style>
+<div class="row">
+    <div class="logo"><span>Mail</span></div>
+    <div class="formcon">
+        <form class="form-inline " id="search-form" name="search-form" onsubmit="return search()">
+            <div width="100%" class="form_container">
+                <div class="d3" style="width:100%;">
+                    <input class="form-control search-field" type="search" id="query" style="width:100%;" placeholder="Search">
+                </div>
+                <button class="search-btn" type="submit" id="search-btn" name="search-btn">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 57.966 57.966" class="srchicon">
+                      <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path>
+                   </svg>                
+                            </button>
+            </div>
+        </form>
+        <div>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                            </svg>
+        </div>
+        <div>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+             </svg>
+        </div>
+
+    </div>
+
+    <div class="hidemob">
+        <div class="topright">
+            <svg class="pincodeMain" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" x="0px" y="0px">
+                <g id="art">
+                   <image id="image" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://instagram.fblr1-4.fna.fbcdn.net/vp/68bc67eaad0b19b49e1033ed9eb78d3d/5D2C8D3A/t51.2885-15/e35/50696122_401850077058078_6471542720683272343_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net" preserveAspectRatio="xMidYMid slice"></image>
+                </g>
+             </svg>
+        </div>
+    </div>
+</div>
+
+<style>
+    .compose,
+    .ticons {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        display: block;
+        height: 2.6rem;
+        stroke-linejoin: round;
+        transition: .2s ease;
+        filter: drop-shadow(0px 1px 2px #00000055);
+    }
+
+    .row {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        width: 100%;
+        top: 0px;
+        border-radius: 0;
+        background: white;
+        box-shadow: 0px 0px 5px rgb(212, 212, 212);
+        /* box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.08); */
+    }
+
+    .formcon {
+        padding: 0.2rem 0.4rem;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-inline {
+        align-self: center;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .form_container {
+        display: flex;
+        border: solid 0px transparent;
+        border-radius: 6px;
+        background: transparent;
+        background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ffffff, #ffffff);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.33);
+    }
+
+
+    button {
+        background-image: linear-gradient(dimgrey, black, #5f5f5f);
+        border: none;
+        outline: none;
+        color: white;
+        border-radius: 0 5px 5px 0;
+        padding: 0rem 0.4rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
+    }
+
+    .search-btn {
+        height: 3rem;
+        padding: 0rem 0.6rem;
+    }
+
+    .srchicon {
+        fill: #ffffff;
+        height: 2rem;
+        margin: 0rem 0.1rem;
+    }
+
+    .search-field {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 4px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        padding: 0rem 1rem;
+        /* background-image: linear-gradient(whitesmoke, #e6e6e6); */
+        color: #000;
+        height: 3rem;
+        font-size: 1.1rem;
+        /* box-shadow: 0px 0px 0px 3px rgb(0, 0, 0); */
+    }
+
+    .d3 {
+        border-radius: 4px 0 0 4px;
+    }
+
+    .srchicon {
+        fill: #ffffff;
+        height: 2rem;
+        margin: 0rem 0.1rem;
+    }
+
+</style>
+<style>
+    @media screen and (max-width: 600px) {
+        .row {
+            padding: 0.4rem 0.4rem;
+        }
+        .ticons {
+            margin: 0px 0 0 0.4rem;
+        }
+    }
+
+    @media screen and (max-width: 1199px) and (min-width: 601px) {
+        .row {
+            padding: 0.4rem 0.4rem;
+        }
+        .ticons {
+            margin: 0px 0 0 0.6rem;
+        }
+
+    }
+
+    @media screen and (min-width: 1200px) {
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #555;
+        }
+        .row {
+            padding: 0.4rem 2rem;
+        }
+        .ticons {
+            margin: 0px 0 0 0.8rem;
+        }
+    }
+
+</style>
+<style>
+    .note {
+        min-height: 45px;
+        border-radius: 1px;
+        cursor: pointer;
+        font-family: "Trebuchet MS", sans-serif;
+        transition: transform .5s;
+        padding: 6px;
+        border-top: 1px solid #eeeeee;
+        margin: 0.3rem;
+    }
+
+    .note span.green {
+        color: #000000;
+        line-height: 24px;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .note .line.small {
+        color: #777777;
+        font-size: 14px;
+    }
+
+</style>
+<div class="bodycon">
+    <div class="navcon">
+        <div class="logoicon">
+            <svg class="compose" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                    <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+             </svg>
+        </div>
+    </div>
+    <div class="contentcon">
+
+        <div class="infocon">
+            <div class="ems">
+                <section class="poptags">
+                    <div class="emtypes">
+                        <ul>
+                            <li>Unsorted</li>
+                            <li>Social</li>
+                            <li>Promo</li>
+                        </ul>
+                    </div>
+                    <div class="note">
+                        <div class="line"><span class="green">You're invited to sell your products on UpLabs Premium</span></div>
+                        <div class="line small mt">You're invited to sell your products on UpLabs Premium because others are earnig lots of money.</div>
+                    </div>
+                    <div class="note">
+                        <div class="line"><span class="green">Well, I don't want to take any risk when recession is near...</span></div>
+                        <div class="line small mt">New job: Mid - Senior Frontend Developer at Timeless, and 21 more matches - AngelList T</div>
+                    </div>
+                    <div class="note">
+                        <div class="line"><span class="green">Allkpop | Breaking K-pop news, videos, photos and celebrity ...</span></div>
+                        <div class="line small mt">Breaking K-pop news, videos, photos and celebrity gossip | allkpop</div>
+                    </div>
+                    <div class="note">
+                        <div class="line"><span class="green">You're invited to sell your products on UpLabs Premium</span></div>
+                        <div class="line small mt">You're invited to sell your products on UpLabs Premium because others are earnig lots of money.</div>
+                    </div>
+                    <div class="note">
+                        <div class="line"><span class="green">Well, I don't want to take any risk when recession is near...</span></div>
+                        <div class="line small mt">New job: Mid - Senior Frontend Developer at Timeless, and 21 more matches - AngelList T</div>
+                    </div>
+                    <div class="note">
+                        <div class="line"><span class="green">Allkpop | Breaking K-pop news, videos, photos and celebrity ...</span></div>
+                        <div class="line small mt">Breaking K-pop news, videos, photos and celebrity gossip | allkpop</div>
+                    </div>
+                </section>
+            </div>
+            <div class="textcon">
+                <section class="poptags">
+                    <div class="action_buttons">
+                        <div class="logoicon">
+                            <svg class="logoogle" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <polyline points="15 14 20 9 15 4"></polyline>
+                    <path d="M4 20v-7a4 4 0 0 1 4-4h12"></path>
+                            </svg>
+                            <span>Forward</span>
+                        </div>
+                        <div class="logoicon">
+                            <svg class="logoogle" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                    <line x1="14" y1="11" x2="14" y2="17"></line>
+             </svg>
+                            <span>Delete</span>
+                        </div>
+                        <div class="logoicon">
+                            <svg class="logoogle" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">                     <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+             </svg>
+                            <span>Spam</span>
+                        </div>
+                        <div class="logoicon">
+                            <svg class="logoogle" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                    <line x1="7" y1="7" x2="7" y2="7"></line>
+             </svg>
+                            <span>Label</span>
+                        </div>
+                        <div class="logoicon">
+                            <svg class="logoogle" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    <line x1="12" y1="11" x2="12" y2="17"></line>
+                    <line x1="9" y1="14" x2="15" y2="14"></line>
+             </svg>
+                            <span>Add to Folder</span>
+                        </div>
+
+                    </div>
+                    <style>
+                        ._2634o {
+                            margin: 0;
+                            max-height: 150px;
+                            display: block;
+                            width: 100%;
+                            border-radius: 8px;
+                        }
+
+                        .x1MBX {
+                            margin: 0rem 10px 0 0;
+                            overflow: hidden;
+                            text-align: center;
+                            max-width: 250px;
+                            flex-shrink: 0;
+                        }
+
+                        .imigis {
+                            display: flex;
+                            padding: 10px;
+                            background: #f5f5f5;
+                            justify-content: flex-start;
+                        }
+
+                        .R6-Wf {
+                            flex-wrap: nowrap;
+                            display: flex;
+                            overflow-x: scroll;
+                            width: 100%;
+                            overflow-y: hidden;
+                            max-width: 740px;
+                        }
+
+                        .R6-Wf::-webkit-scrollbar {
+                            width: 0px;
+                            height: 0px;
+                        }
+
+                        .R6-Wf::-webkit-scrollbar-thumb {
+                            background-color: #555;
+                        }
+
+                    </style>
+                    <div class="mail_body">
+                        <h1 style="margin-bottom: 8px;" lang="en">You have got an e-mail...</h1>
+                        <p><b>Electronic mail</b> (<b>email</b> or <b>e-mail</b>) is a method of exchanging messages ("<a href="/wiki/Mail" title="Mail">mail</a>") between people using electronic devices. Invented by <a href="/wiki/Ray_Tomlinson" title="Ray Tomlinson">Ray Tomlinson</a>, email first entered limited use in the 1960s and by the mid-1970s had taken the form now recognized as email. Email operates across <a href="/wiki/Computer_network" title="Computer network">computer networks</a>, which today is primarily the <a href="/wiki/Internet_access" title="Internet access">Internet</a>. Some early email systems required the author and the recipient to both be <a href="/wiki/Online_and_offline" title="Online and offline">online</a> at the same time, in common with <a href="/wiki/Instant_messaging" title="Instant messaging">instant messaging</a>. Today's email systems are based on a <a href="/wiki/Store-and-forward" class="mw-redirect" title="Store-and-forward">store-and-forward</a> model. Email <a href="/wiki/Server_(computing)" title="Server (computing)">servers</a> accept, forward, deliver, and store messages. Neither the users nor their computers are required to be online simultaneously; they need to connect only briefly, typically to a <a href="/wiki/Message_transfer_agent" title="Message transfer agent">mail server</a> or a <a href="/wiki/Webmail" title="Webmail">webmail</a> interface for as long as it takes to send or receive messages.
+                        </p>
+                        <div class="imigis">
+                            <div class="R6-Wf">
+                                <div class="_3TUA0 x1MBX on">
+                                    <img class="_2634o" src="https://instagram.fblr1-4.fna.fbcdn.net/vp/1a2327562702a015cc283c14b228c7dc/5D11BD7E/t51.2885-15/e35/46972484_2178264565826465_493839089642896211_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net" />
+                                </div>
+                                <div class="_3TUA0 x1MBX">
+                                    <img class="_2634o" src="https://instagram.fblr1-4.fna.fbcdn.net/vp/a0fd6db46d6e8350b4a05717504f1a12/5D338661/t51.2885-15/e35/51536032_2275671389162235_2910644194076796727_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net" />
+                                </div>
+                                <div class="_3TUA0 x1MBX">
+                                    <img class="_2634o" src="https://instagram.fblr1-4.fna.fbcdn.net/vp/68bc67eaad0b19b49e1033ed9eb78d3d/5D2C8D3A/t51.2885-15/e35/50696122_401850077058078_6471542720683272343_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                                </div>
+                                <div class="_3TUA0 x1MBX">
+                                    <img class="_2634o" src="https://instagram.fblr1-4.fna.fbcdn.net/vp/57458cac92ac6c6e3fb6fc150b1c23c2/5D2BEB33/t51.2885-15/e35/49648275_2326810957605721_1318756717159886723_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                                </div>
+                                <div class="_3TUA0 x1MBX">
+                                    <img class="_2634o" src="https://instagram.fblr1-4.fna.fbcdn.net/vp/d3e02cd2743b67f42e724ce652461916/5D145BF0/t51.2885-15/e35/49933689_2289635787990745_5499321934185228459_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                                </div>
+                                <div class="_3TUA0 x1MBX">
+                                    <img class="_2634o" src="https://instagram.fblr1-4.fna.fbcdn.net/vp/f4712fb55904a2414cfd775647db084e/5D30B387/t51.2885-15/e35/50255332_334126790542649_7012299025827367840_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                                </div>
+                                <div class="_3TUA0 x1MBX">
+                                    <img class="_2634o" src="https://instagram.fblr1-4.fna.fbcdn.net/vp/58ab10e29c429017d100dc34fc66b512/5D0F6C22/t51.2885-15/e35/53806601_107705233603260_6697719093741818085_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                                </div>
+                            </div>
+                        </div>
+                        <p>Originally an <a href="/wiki/ASCII" title="ASCII">ASCII</a> text-only communications medium, Internet email was extended by <a href="/wiki/Multipurpose_Internet_Mail_Extensions" class="mw-redirect" title="Multipurpose Internet Mail Extensions">Multipurpose Internet Mail Extensions</a> (MIME) to carry text in other character sets and multimedia content attachments. <a href="/wiki/International_email" title="International email">International email</a>, with internationalized email addresses using <a href="/wiki/UTF-8" title="UTF-8">UTF-8</a>, has been standardized, but as of 2017<sup class="plainlinks noexcerpt noprint asof-tag update" style="display:none;"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Email&amp;action=edit">[update]</a></sup> it has not been widely adopted.<sup id="cite_ref-first_2-0" class="reference"><a href="#cite_note-first-2">[2]</a></sup>
+                        </p>
+                        <p>The history of modern Internet email services reaches back to the early <a href="/wiki/ARPANET" title="ARPANET">ARPANET</a>, with standards for encoding email messages published as early as 1973 (<a class="external mw-magiclink-rfc" rel="nofollow" href="https://tools.ietf.org/html/rfc561">RFC 561</a>). An email message sent in the early 1970s looks very similar to a basic email sent today. Email had an important role in creating the Internet,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> and the conversion from ARPANET to the Internet in the early 1980s produced the core of the current services.
+                        </p>
+
+
+                        <h2><span class="mw-headline" id="Terminology">Terminology</span></h2>
+                        <p>Historically, the term <i>electronic mail</i> was used generically for any electronic document transmission. For example, several writers in the early 1970s used the term to describe <a href="/wiki/Fax" title="Fax">fax</a> document transmission.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> As a result, it is difficult to find the first citation for the use of the term with the more specific meaning it has today.
+                        </p>
+                        <p>Electronic mail has been most commonly called <i>email</i> or <i>e-mail</i> since around 1993,<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup> but variations of the spelling have been used:
+                        </p>
+
+
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</div>
+<style>
+    header {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #f0f0f0;
+        padding: 0.5rem;
+    }
+
+    .bodycon {
+        flex: 1 1 auto;
+        -webkit-flex: 1 1 auto;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row;
+        flex-flow: row;
+        background: #f0f0f0;
+        border: none;
+    }
+
+    .logoogle {
+        fill: none;
+        height: 2rem;
+        stroke: #000000;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        display: block;
+        margin: 0 0.2rem 0 0.6rem;
+        width: 2rem;
+        padding: 3px;
+        border-radius: 8px;
+    }
+
+    .navcon {
+        flex: 1 1 10%;
+        -webkit-flex: 1 1 10%;
+        padding: 0 0.5rem;
+        margin: 0.5rem 0rem 1rem 0rem;
+        border-radius: 0 8px 8px 0;
+        background: white;
+        box-shadow: 1px 2px 5px rgb(212, 212, 212);
+    }
+
+    .contentcon {
+        flex: 1 1 90%;
+        -webkit-flex: 1 1 90%;
+        padding: 0 0.5rem;
+        background: #FFFFFF;
+        margin: 0.5rem 0.5rem 1rem 0.5rem;
+        box-shadow: 1px 2px 5px rgb(212, 212, 212);
+        border-radius: 8px;
+    }
+
+    .textcon {
+        flex: 1 1 65%;
+        -webkit-flex: 1 1 65%;
+    }
+
+    .ems {
+        flex: 1 1 35%;
+        -webkit-flex: 1 1 35%;
+    }
+
+    .language {
+        box-shadow: 1px 2px 5px rgb(212, 212, 212);
+        padding: 0.5rem;
+        margin: 0 0.5rem;
+        outline: none;
+        font-size: 1.2rem;
+        height: 3.5rem;
+        border-radius: 8px;
+        border: 0px;
+    }
+
+    .more {
+        background: #ffffff;
+        text-align: right;
+        padding: 10px;
+    }
+
+    .more span {
+        padding: 0px;
+        color: 000;
+        font-weight: bold;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .infocon {
+        flex: 3 1 auto;
+        -webkit-flex: 3 1 auto;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row;
+        flex-flow: row;
+        border: none;
+    }
+
+    .poptags {
+        background: #FFFFFF;
+        margin: 0.5rem 0.5rem 1rem 0.5rem;
+        box-shadow: 1px 2px 5px rgb(212, 212, 212);
+        border-radius: 8px;
+
+    }
+
+    .featured-article-line {
+        padding: 10px 0px;
+        flex: 2 1 100%;
+        -webkit-flex: 2 1 100%;
+        font-weight: bold;
+        font-family: Arial;
+        text-transform: uppercase;
+    }
+
+    .logoicon {
+        margin: 0.5rem 0.5rem 0.5rem 0;
+        align-self: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .action_buttons {
+        display: flex;
+        border-bottom: 2px solid #666666;
+    }
+
+    .emtypes {
+        display: flex;
+        background: #FFFFFF;
+        margin: 0.5rem 0.5rem 1rem 0.5rem;
+    }
+
+    .emtypes ul {
+        display: flex;
+    }
+
+    .emtypes ul li {
+        margin: 0 0.5rem 0 0;
+        padding: 0.5rem;
+    }
+
+    .emtypes ul li:first-child {
+        border-bottom: 2px solid #666666;
+    }
+
+    .mail_body p,
+    .mail_body h1 {
+        font-family: breezesans;
+        padding: 0 10px;
+    }
+
+</style>

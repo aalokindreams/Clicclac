@@ -1,0 +1,264 @@
+<html>
+
+<head>
+    <title>Arin</title>
+    <meta charset='UTF-8' />
+    <meta name="robots" content="noimageindex, noarchive">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro' media='all' rel='stylesheet' type='text/css' />
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <link rel="manifest" href="/manifest.json">
+    <script type="text/javascript">
+        //<![CDATA[
+        var numfeed = 5;
+        var startfeed = 0;
+        var urlblog = "https://geepdighachcha.blogspot.com";
+        var charac = 260;
+        var urlprevious, urlnext;
+
+        function myfeed(e, t) {
+            for (var n = e.split("<"), r = 0; r < n.length; r++) - 1 != n[r].indexOf(">") && (n[r] = n[r].substring(n[r].indexOf(">") + 1, n[r].length));
+            return n = n.join(""), n = n.substring(0, t - 1)
+        }
+
+        function showrecentpostsae(e) {
+            var t, n, r, a, i, s = "";
+            urlprevious = "", urlnext = "";
+            for (var l = 0; l < e.feed.link.length; l++) "previous" == e.feed.link[l].rel && (urlprevious = e.feed.link[l].href), "next" == e.feed.link[l].rel && (urlnext = e.feed.link[l].href);
+            for (var d = 0; d < numfeed && d != e.feed.entry.length; d++) {
+                t = e.feed.entry[d], n = t.title.$t;
+                for (var l = 0; l < t.link.length; l++)
+                    if ("alternate" == t.link[l].rel) {
+                        r = t.link[l].href;
+                        break
+                    }
+                i = "content" in t ? t.content.$t : "summary" in t ? t.summary.$t : "", a = "media$thumbnail" in t ? t.media$thumbnail.url : "https://3.bp.blogspot.com/-BHuXHny1kOk/VXrkSyxKCjI/AAAAAAAACas/pZLJAEUDtds/s1600/no-image.png", s += "<div class='recentpostel'>", s += "<div class='textcon'>", s += "<h3><a href='" + r + "'>" + n + "</a></h3>", s += "<p>", s += "<img class='imigi' src='" + a + "' />", s += "<span>" + myfeed(i, charac) + "...</span></p></div>", s += "</div></a>"
+            }
+            document.getElementById("recentpostsae").innerHTML = s, s = "", s += urlprevious ? "<a href='javascript:navigasifeed(-1);' class='previous'>Previous</a>" : "<span class='noactived previous'>Prev</span>", s += "<a href='javascript:navigasifeed(0);' class='home'>Home</a>", s += urlnext ? "<a href='javascript:navigasifeed(1);' class='next'>Next</a>" : "<span class='noactived next'>Next</span>", document.getElementById("nextprev").innerHTML = s
+        }
+
+        function navigasifeed(e) {
+            var t, n; - 1 == e ? (t = urlprevious.indexOf("?"), n = urlprevious.substring(t)) : 1 == e ? (t = urlnext.indexOf("?"), n = urlnext.substring(t)) : n = "?start-index=1&max-results=" + numfeed + "&orderby=published&alt=json-in-script", n += "&callback=showrecentpostsae", incluirscript(n)
+        }
+
+        function incluirscript(e) {
+            1 == startfeed && removerscript(), document.getElementById("recentpostsae").innerHTML = "<div id='recentpostload'></div>", document.getElementById("nextprev").innerHTML = "";
+            var t = urlblog + "/feeds/posts/default" + e,
+                n = document.createElement("script");
+            n.setAttribute("type", "text/javascript"), n.setAttribute("src", t), n.setAttribute("id", "mylabel"), document.getElementsByTagName("head")[0].appendChild(n), startfeed = 1
+        }
+
+        function removerscript() {
+            var e = document.getElementById("mylabel"),
+                t = e.parentNode;
+            t.removeChild(e)
+        }
+        onload = function() {
+            navigasifeed(0)
+        };
+        //]]>
+
+    </script>
+    <style>
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #555;
+        }
+
+        body {
+            font-family: "Source Sans Pro", breezesans, -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #111;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+            vertical-align: baseline;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="header-inner" style="text-align:  center;">
+        <div class="titlewrapper">
+            <h1 class="site-title">
+                <a href="https://forgeofcreations.blogspot.com/">Aalok Yadav</a>
+            </h1>
+        </div>
+        <h2 class="site-description">Browser is my canvas</h2>
+    </div>
+    <div class="feedcon">
+        <div class="container">
+            <div id="recentpostsae"></div>
+            <div id="nextprev"></div>
+        </div>
+    </div>
+    <style>
+        .poptags {
+            padding: 0 0.5rem;
+            background: #FFFFFF;
+            margin: 0.2rem 0.2rem 1rem 0.2rem;
+        }
+
+        header {
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0.5rem 0;
+            background: #F3F3F3;
+        }
+
+
+        .feedcon {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+    </style>
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+            {
+            font-family: 'Playfair Display', 'Croissant One', 'Times New Roman', serif;
+            font-weight: 400;
+            clear: both;
+            line-height: 1.2;
+        }
+
+        .site-description {
+            color: #bbbbbb;
+            font-size: 18px;
+            margin: 0.5em 0 0.25em;
+        }
+
+        .site-title {
+            font-weight: bold;
+            font-size: 50px;
+            margin: 0;
+        }
+
+        .site-title a,
+        .site-title a:visited {
+            color: #2cb503;
+            font-weight: bold;
+            background: -webkit-linear-gradient(transparent, transparent), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/blue_glitter.gif) repeat 100px 20px;
+            background: -o-linear-gradient(transparent, transparent) !important;
+            background-clip: text !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: #0000004a !important;
+            -webkit-letter-spacing: 1px;
+            -moz-letter-spacing: 1px;
+            -ms-letter-spacing: 1px;
+            letter-spacing: 1px;
+            -webkit-text-decoration: none;
+            text-decoration: none;
+            /* -webkit-filter: hue-rotate(50deg); */
+            /* filter: hue-rotate(50deg); */
+        }
+
+        h3 {
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.2em;
+            background-position: 0% 90%;
+            padding-bottom: 10px;
+            transition: background-size 0.25s ease-in;
+            display: inline;
+            font-size: 1.8em;
+        }
+
+        a:hover {
+            color: #0000ff;
+        }
+
+        a,
+        a:link,
+        a:visited {
+            color: #333;
+            line-height: 1.2em;
+            text-decoration: none;
+        }
+
+        .recentpostel {
+            min-height: 140px;
+            border-radius: 1px;
+            transition: transform .5s;
+            padding: 10px;
+            background: #fff;
+
+        }
+
+        .recentpostel a {
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+
+        .recentpostel:hover {
+            background-color: #fefefe;
+        }
+
+        #recentpostload {
+            color: #888;
+            font-family: Tahoma;
+            font-size: 100px;
+            letter-spacing: -10px;
+            text-align: center;
+            text-shadow: -5px 0 1px #444;
+            background: #fff url(https://2.bp.blogspot.com/-60aISBQLRY0/VFBMqzLfzGI/AAAAAAAABgM/GInmVTvEzkc/s1600/loader.gif) no-repeat 50% 50%;
+            height: 470px;
+        }
+
+        #nextprev {
+            border-top: 1px solid #ddd;
+            color: #bbb;
+            display: flex;
+            margin-top: 20px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .previous,
+        .next {
+            color: #666;
+        }
+
+        .previous,
+        .home,
+        .next {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .imigi {
+            height: auto;
+            width: 5.5rem;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            border-radius: 4px;
+            float: left;
+        }
+
+    </style>
+</body>
+
+</html>

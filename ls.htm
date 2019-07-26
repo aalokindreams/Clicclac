@@ -1,0 +1,401 @@
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" id="viewport" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="noimageindex, noarchive" name="robots">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Noto+sans|Nanum+Gothic" rel="stylesheet">
+    <meta content="yes" name="mobile-web-app-capable">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: "Source sans pro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            vertical-align: baseline;
+            list-style-type: none;
+            border: 0;
+            outline: 0;
+        }
+
+    </style>
+</head>
+<div class="padding">
+    <div class="formcon">
+        <div class="logoicon">
+            <svg class="logoogle logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path></defs><path fill="#FBBC05" d="M0 37V11l17 13z"></path><path fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"></path></svg>
+        </div>
+        <form class="form-inline " id="search-form" name="search-form" onsubmit="return search()">
+            <div class="d3 " style="width:100%; ">
+                <div>
+                    <svg class="clrful filtericon" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                <line x1="4" y1="21" x2="4" y2="14" stroke="#4285F4"></line>
+                <line x1="4" y1="10" x2="4" y2="3" stroke="#4285F4"></line>
+                <line x1="12" y1="21" x2="12" y2="12" stroke="#4285F4"></line>
+                <line x1="12" y1="8" x2="12" y2="3" stroke="#4285F4"></line>
+                <line x1="20" y1="21" x2="20" y2="16" stroke="#4285F4"></line>
+                <line x1="20" y1="12" x2="20" y2="3" stroke="#4285F4"></line>
+                <line x1="1" y1="14" x2="7" y2="14" stroke="#34A853"></line>
+                <line x1="9" y1="8" x2="15" y2="8" stroke="#34A853"></line>
+                <line x1="17" y1="16" x2="23" y2="16" stroke="#34A853"></line>
+             </svg>
+                </div><input class="form-control search-field " type="search" id="query" style="width:100%;" placeholder="Hi!">
+                <button class="search-btn " type="submit" id="search-btn" name="search-btn" value="">
+<svg xmlns="http://www.w3.org/2000/svg " viewBox="-1 -1 57.966 57.966 " class="srchicon ">
+                      <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z "></path>
+                   </svg>                
+                            </button>
+            </div>
+            <div class="logoicon">
+                <svg class="logoogle clrful" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <defs>
+          <linearGradient id="gradient6" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="25%" stop-color="#FFC107"></stop>
+            <stop offset="75%" stop-color="#FF9800"></stop>
+          </linearGradient>
+        <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="5%" stop-color="#2199f3"></stop>
+        <stop offset="95%" stop-color="#00c044"></stop>
+      </linearGradient></defs>
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" stroke="url(#gradient6)" fill="url(#gradient6)"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="url(#gradient6)"></path>
+                    <line x1="12" y1="19" x2="12" y2="23" stroke="#4285F4"></line>
+                    <line x1="8" y1="23" x2="16" y2="23" stroke="#4285F4"></line>
+         </svg>
+            </div>
+            <div class="logoicon">
+                <svg class="logoogle clrful" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <defs>
+  </defs>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="url(#gradient1)"></path>
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" stroke="url(#gradient1)"></path>
+         </svg>
+            </div>
+            <div class="logoicon">
+                <svg class="pincodemain" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" x="0px" y="0px">
+                <g id="art">
+                   <image id="image" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://vignette.wikia.nocookie.net/loonatheworld/images/6/6d/Yves_debut_photo_6.png/revision/latest/scale-to-width-down/350?cb=20171120144804" preserveAspectRatio="xMidYMid slice"></image>
+                </g>
+             </svg>
+            </div>
+        </form>
+
+
+    </div>
+    <div class="R6-Wf">
+        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/bird">Forests</a>
+        </div>
+        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/flowers">Birds</a>
+        </div>
+        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/animal">Architecture</a>
+        </div>
+        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Fishes</a>
+        </div>
+        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/parrot">Interior</a>
+        </div>
+        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/eagle">Mountains</a>
+        </div>
+        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/nature">Dogs</a>
+        </div>
+        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Stars</a>
+        </div>
+        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Sea</a>
+        </div>
+        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Fun</a>
+        </div>
+        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Tech</a>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    #image {
+        width: 100%;
+        height: auto;
+    }
+
+    .pincodemain {
+        /*background-image: url(https://vignette.wikia.nocookie.net/loonatheworld/images/6/6d/Yves_debut_photo_6.png/revision/latest/scale-to-width-down/350?cb=20171120144804);
+            box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.34);*/
+        border-radius: 4px;
+        fill: none;
+        margin: 0 0.6rem;
+        padding: 2px;
+        position: absolute;
+        right: 0;
+        box-shadow: 1px 2px 5px rgb(212, 212, 212);
+    }
+
+    .logo {
+        margin: 0 0.6rem;
+    }
+
+    .filtericon {
+        width: 2.6rem;
+        height: 2.6rem;
+        margin: 0 0.2rem 0 0.4rem;
+    }
+
+    .padding {
+        padding: 0.3rem 0.6rem;
+    }
+
+
+    .main_wrap {
+        display: flex;
+    }
+
+    @media screen and (max-width: 600px) {
+        .srchicon {
+            width: 2rem;
+            height: 2rem;
+        }
+        .search-field {
+            height: 3rem;
+        }
+        .search-btn {
+            height: 3rem;
+            padding: 0rem 0.6rem;
+        }
+        .logoogle,
+        .pincodemain {
+            height: 3rem;
+            width: 3rem;
+        }
+        /*
+        .clrful {
+            margin: 0.4rem 0rem 0.4rem 0rem;
+        }
+*/
+    }
+
+    @media screen and (max-width: 1199px) and (min-width: 601px) {
+        .srchicon {
+            width: 2rem;
+            height: 2rem;
+        }
+        .search-field {
+            height: 3rem;
+            font-size: 1.2rem;
+            padding: 0rem 0.5rem;
+        }
+        .search-btn {
+            height: 3rem;
+            padding: 0rem 0.5rem;
+        }
+        .logoogle,
+        .pincodemain {
+            height: 3rem;
+            width: 3rem;
+        }
+        /*
+        .clrful {
+            margin: 0.4rem 0rem 0.4rem 0rem;
+        }*/
+    }
+
+    @media screen and (min-width: 1200px) {
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #555;
+        }
+        .srchicon {
+            width: 2rem;
+            height: 2rem;
+        }
+        .search-field {
+            height: 3rem;
+            padding: 0rem 1.2rem;
+            font-size: 1.4rem;
+        }
+        .search-btn {
+            height: 3rem;
+            padding: 0rem 0.6rem;
+        }
+        .logoogle,
+        .pincodemain {
+            height: 3.3rem;
+            width: 3.3rem;
+        }
+        /*        .clrful {
+            margin: 0rem 0.6rem;
+        }*/
+    }
+
+
+    .flexy {
+        display: flex;
+    }
+
+</style>
+
+<style>
+    .logoicon {
+        display: flex;
+        align-items: center;
+    }
+
+    .logoogle {
+        border-radius: 5px;
+        padding: 3px;
+        box-shadow: 1px 2px 5px rgb(212, 212, 212);
+    }
+
+    .clrful {
+        stroke-width: 1.8;
+        border-radius: 5px;
+        fill: none;
+        padding: 6px;
+        box-shadow: none;
+        display: block;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: .2s ease;
+    }
+
+</style>
+<style>
+    .formcon {
+        display: flex;
+        background: #ffffff;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+    }
+
+    .form-inline {
+        width: 100%;
+        position: sticky;
+        display: flex;
+        padding: 0.4rem 0;
+        align-items: center;
+    }
+
+    .d3 {
+        display: flex;
+        box-shadow: 1px 2px 5px rgb(212, 212, 212);
+        /*        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.19);*/
+        background: #ffffff;
+        border: 3px solid #ffffff;
+        margin: 0rem 0.4rem;
+        max-width: 650px;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    .search-field {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 0px;
+        outline: none;
+        padding: 0rem 0.6rem;
+        background: transparent;
+        color: #000;
+        font-size: 1.1rem;
+    }
+
+    .search-btn {
+        background-color: #ffe32e;
+        border: none;
+        outline: none;
+        border-radius: 0 4px 4px 0;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19); */
+    }
+
+    .srchicon {
+        fill: #5f5f5f;
+        margin: 0.01rem 0.1rem;
+    }
+
+</style>
+<style>
+    ._2634o {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1;
+        font-family: "noto sans", sans-serif;
+        text-transform: capitalize;
+        display: block;
+        transition: background-color .15s ease-in-out;
+        text-decoration: none;
+        padding: 10px;
+        color: #000000;
+    }
+
+    .x1MBX {
+        margin: 4px 4px;
+        overflow: hidden;
+        border-radius: 3px;
+        text-align: center;
+        /*flex-basis: 100px;*/
+        background-blend-mode: lighten;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        flex-shrink: 0;
+        max-width: 250px;
+    }
+
+    .R6-Wf {
+        flex-wrap: nowrap;
+        display: flex;
+        background: #ffffff;
+        overflow-x: visible;
+        overflow-y: hidden;
+        margin: 6px 0 0 0;
+    }
+
+    .R6-Wf::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+    .R6-Wf::-webkit-scrollbar-thumb {
+        background-color: #555;
+    }
+
+    .R6-Wf div:nth-child(7n-6) {
+        background: #e7c6ff url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+    .R6-Wf div:nth-child(7n-5) {
+        background: #bcefff url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+    .R6-Wf div:nth-child(7n-4) {
+        background: #ffcdba url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+    .R6-Wf div:nth-child(7n-3) {
+        background: #ffccd5 url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+    .R6-Wf div:nth-child(7n-2) {
+        background: #b6e3ff url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+    .R6-Wf div:nth-child(7n-1) {
+        background: wheat url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+    .R6-Wf div:nth-child(7n) {
+        background: #e0fcb2 url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+</style>

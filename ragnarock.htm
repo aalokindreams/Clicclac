@@ -1,0 +1,871 @@
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" id="viewport" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="noimageindex, noarchive" name="robots">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+    <meta content="yes" name="mobile-web-app-capable">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-weight: 400;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /*        background: #ffffff url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-colorful.png);*/
+        }
+
+        /*
+        body:before {
+            background-image: url(file:///C:/Users/me/Desktop/Fotolia_115715579_Subscription_Monthly_XXL.jpg);
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            content: '';
+            background-position: center;
+            z-index: -1;
+        }
+*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            vertical-align: baseline;
+            list-style-type: none;
+            border: 0;
+            outline: 0;
+        }
+
+    </style>
+</head>
+
+<div class="row">
+    <div class="topright">
+        <svg class="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"><path d="M30.402 7.094c-1.058.47-2.198.782-3.392.928 1.218-.725 2.154-1.885 2.595-3.256-1.134.674-2.405 1.165-3.75 1.43-1.077-1.148-2.612-1.862-4.31-1.862-3.268 0-5.915 2.635-5.915 5.893 0 .464.056.91.155 1.34-4.915-.244-9.266-2.59-12.18-6.158-.51.87-.806 1.885-.806 2.96 0 2.044 1.045 3.847 2.633 4.905-.974-.032-1.883-.3-2.68-.736v.07c0 2.857 2.034 5.236 4.742 5.773-.498.138-1.022.21-1.56.21-.38 0-.75-.034-1.11-.103.75 2.344 2.93 4.042 5.518 4.09-2.024 1.58-4.57 2.523-7.333 2.523-.478 0-.952-.032-1.41-.085 2.613 1.674 5.72 2.65 9.054 2.65 10.872 0 16.814-8.976 16.814-16.765 0-.254-.008-.507-.018-.762 1.155-.83 2.155-1.868 2.95-3.047z"></path></svg>
+    </div>
+    <div class="formcon">
+        <form class="form-inline " id="search-form" name="search-form" onsubmit="return search()">
+            <div width="100%" class="form_container">
+                <div class="d3" style="width:100%;">
+                    <input class="form-control search-field" type="search" id="query" style="width:100%;" placeholder="Search">
+                </div>
+                <button class="search-btn" type="submit" id="search-btn" name="search-btn">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 57.966 57.966" class="srchicon">
+                      <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path>
+                   </svg>                
+                            </button>
+            </div>
+        </form>
+        <div>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                            </svg>
+        </div>
+        <div>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+             </svg>
+        </div>
+    </div>
+    <div class="hidemob">
+        <div class="topright">
+            <svg class="pincodeMain" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" x="0px" y="0px">
+                <g id="art">
+                   <image id="image" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://vignette.wikia.nocookie.net/loonatheworld/images/6/6d/Yves_debut_photo_6.png/revision/latest/scale-to-width-down/350?cb=20171120144804" preserveAspectRatio="xMidYMid slice"></image>
+                </g>
+             </svg>
+        </div>
+    </div>
+</div>
+<style>
+    .row {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        background: white;
+        width: 100%;
+        top: 0px;
+        padding: 0.2rem 2rem;
+        /* box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.08); */
+    }
+
+    .ticons,
+    .heart {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: .2s ease;
+        filter: drop-shadow(0px 1px 2px #00000055);
+    }
+
+    .heart {
+        height: 3.3rem;
+        width: 3.3rem;
+        margin: 0 1rem;
+        stroke: #b932fd;
+    }
+
+    .topright {
+        align-self: center;
+    }
+
+    .formcon {
+        padding: 0.2rem 0.4rem;
+        display: flex;
+        background: #ffffff;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-inline {
+        align-self: center;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .form_container {
+        display: flex;
+        border: solid 3px transparent;
+        border-radius: 10px;
+        background: transparent;
+        /* background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ffffff, #ffffff); */
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.33);
+    }
+
+    .d3 {
+        border-radius: 5px 0 0 5px;
+    }
+
+    .search-field {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 4px;
+        border-radius: 8px 0 0 8px;
+        outline: none;
+        padding: 0rem 1rem;
+        background-image: linear-gradient(whitesmoke, #e6e6e6);
+        color: #000;
+        height: 3rem;
+        font-size: 1.1rem;
+        /* box-shadow: 0px 0px 0px 3px rgb(0, 0, 0); */
+    }
+
+    .search-btn {
+        height: 3rem;
+        padding: 0rem 0.6rem;
+    }
+
+    button {
+        background-image: linear-gradient(dimgrey, black, #5f5f5f);
+        border: none;
+        outline: none;
+        color: white;
+        border-radius: 0 8px 8px 0;
+        padding: 0rem 0.4rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19); */
+    }
+
+    .srchicon {
+        fill: #ffffff;
+        height: 2rem;
+        margin: 0rem 0.1rem;
+    }
+
+    .ticons {
+        display: block;
+        margin: 0px 0 0 1rem;
+        height: 2.8rem;
+    }
+
+    .hidemob {
+        align-self: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .pincodemain {
+        margin: 0px 0rem;
+        width: 3.3rem !important;
+        height: 3.3rem !important;
+        fill: none;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.37);
+        border-radius: 8px;
+        background: #fff;
+        padding: 2px;
+        stroke: #1ed760;
+    }
+
+    #image {
+        width: 100%;
+        height: auto;
+    }
+
+</style>
+<ul class="tabs">
+    <li><a class="active" href="#/one">Web</a></li>
+    <li><a class="" href="#/two">Images</a></li>
+    <li><a class="" href="#/three">Videos</a></li>
+    <li><a class="" href="#/four">Wiki</a></li>
+</ul>
+
+<style>
+    @media screen and (max-width: 600px) {
+        ul.tabs li a span {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 1199px) and (min-width: 601px) {
+        ul.tabs li a span {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {}
+
+</style>
+
+<style>
+    ul.tabs {
+        margin: 0 auto;
+        display: flex;
+        list-style: none;
+        overflow: hidden;
+        justify-content: center;
+        padding: 0;
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+        border-bottom: 1px solid #ffdd00;
+        position: sticky;
+        /* box-shadow: 0px -4px 12px #ffdd00; */
+    }
+
+    ul.tabs::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+    ul.tabs li {
+        padding: 0px 0.6rem;
+    }
+
+    ul.tabs li a {
+        position: relative;
+        display: block;
+        padding: 8px 10px 8px 10px;
+        font-family: 'Breezesans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-decoration: none;
+    }
+
+    ul.tabs li a.active {
+        z-index: 4;
+        outline: none;
+        border-bottom: 3px solid #ffdd00;
+    }
+
+    #content {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+</style>
+
+<div class="wrap">
+
+    <div id="content">
+        <section id="one">
+            <div class="containing">
+                <div class="panel">
+                    <h1>Web</h1>
+                    <div class="note">
+                        <div class="line"><span class="green">Allkpop | Breaking K-pop news, videos, photos and celebrity ...</span></div>
+                        <div class="line small mt">Breaking K-pop news, videos, photos and celebrity gossip | allkpop</div>
+                        <div class="line med mt"><span>https://www.allkpop.com</span></div>
+                    </div>
+
+                    <div class="note">
+                        <div class="line"><span class="green">K-Pop - Topic - YouTube</span></div>
+                        <div class="line small mt">K-pop is a music genre originating in South Korea that is characterized by a wide variety of audiovisual elements. Although it includes all genres of "popula...</div>
+                        <div class="line med mt"><span>youtube.com/music/kpop</span></div>
+
+                    </div>
+                    <div class="note">
+                        <div class="line"><span class="green">Koreaboo — breaking k-pop news, photos and viral videos</span></div>
+                        <div class="line small mt">Find breaking k-pop news, korean viral videos and exclusive content from the biggest k-pop idols. Creators of KCON and biggest k-pop site in the world.</div>
+                        <div class="line med mt"><span>koreaboo.com</span></div>
+
+                    </div>
+                    <div class="note">
+                        <div class="line"><span class="green">32,000+ Free Kpop music playlists | 8tracks radio</span></div>
+                        <div class="line small mt">8tracks radio. Online, everywhere. - stream 32,000+ kpop playlists including korean, f(x), and shinee music from your desktop or mobile device.</div>
+                        <div class="line med mt"><span>yahoo.com/style/tagged/food</span></div>
+
+                    </div>
+                    <div class="note">
+                        <div class="line"><span class="green">1 Million pins about KPOP | Pinterest</span></div>
+                        <div class="line small mt">Find photos of your favourite KPOP idols on Pinterest...</div>
+                        <div class="line med mt"><span>pinterest.com/categories/kpop</span></div>
+
+                    </div>
+                    <div id="no-cards">
+                        <div class="line">No cards</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="two" style="display: none;">
+            <div class="panel">
+
+                <h1>Images</h1>
+                <div class="R6-Wf">
+                    <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/bird">HTML5</a>
+                    </div>
+                    <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/flowers">CSS3</a>
+                    </div>
+                    <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/animal">JavaScript</a>
+                    </div>
+                    <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">SVG</a>
+                    </div>
+                    <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/parrot">C++</a>
+                    </div>
+                    <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/eagle">Python</a>
+                    </div>
+                    <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/nature">Rust</a>
+                    </div>
+                    <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Gravit</a>
+                    </div>
+                    <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">UI/UX</a>
+                    </div>
+                </div>
+                <div class="slidepanels">
+                    <div id="cycler4" class="cycler">
+                        <img src="https://instagram.fblr1-4.fna.fbcdn.net/vp/1a2327562702a015cc283c14b228c7dc/5D11BD7E/t51.2885-15/e35/46972484_2178264565826465_493839089642896211_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                    </div>
+                    <div id="cycler1" class="cycler">
+                        <img src="https://instagram.fblr1-4.fna.fbcdn.net/vp/f32f63977830ceab7234c7e50955b33a/5D47C20C/t51.2885-15/e35/38787690_422084398313464_4080184653066010624_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                    </div>
+                    <div id="cycler1" class="cycler">
+                        <img src="https://instagram.fblr1-4.fna.fbcdn.net/vp/57458cac92ac6c6e3fb6fc150b1c23c2/5D2BEB33/t51.2885-15/e35/49648275_2326810957605721_1318756717159886723_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                    </div>
+                    <div id="cycler1" class="cycler">
+                        <img src="https://instagram.fblr1-4.fna.fbcdn.net/vp/a0fd6db46d6e8350b4a05717504f1a12/5D338661/t51.2885-15/e35/51536032_2275671389162235_2910644194076796727_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                    </div>
+                    <div id="cycler1" class="cycler">
+                        <img src="https://instagram.fblr1-4.fna.fbcdn.net/vp/d3e02cd2743b67f42e724ce652461916/5D145BF0/t51.2885-15/e35/49933689_2289635787990745_5499321934185228459_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                    </div>
+                    <div id="cycler1" class="cycler">
+                        <img src="https://instagram.fblr1-4.fna.fbcdn.net/vp/f4712fb55904a2414cfd775647db084e/5D30B387/t51.2885-15/e35/50255332_334126790542649_7012299025827367840_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                    </div>
+                    <div id="cycler1" class="cycler">
+                        <img src="https://instagram.fblr1-4.fna.fbcdn.net/vp/68bc67eaad0b19b49e1033ed9eb78d3d/5D2C8D3A/t51.2885-15/e35/50696122_401850077058078_6471542720683272343_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                    </div>
+                    <div id="cycler1" class="cycler">
+                        <img src="https://instagram.fblr1-4.fna.fbcdn.net/vp/58ab10e29c429017d100dc34fc66b512/5D0F6C22/t51.2885-15/e35/53806601_107705233603260_6697719093741818085_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                    </div>
+
+                    <div id="cycler2" class="cycler">
+                        <img src="https://instagram.fblr1-4.fna.fbcdn.net/vp/25ce644699d25286369daf6368833b5c/5D34B565/t51.2885-15/e35/50564109_230991954379469_7650208311021323780_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .slidepanels {
+                line-height: 0;
+                -webkit-column-count: 3;
+                -webkit-column-gap: 12px;
+                -moz-column-count: 3;
+                -moz-column-gap: 12px;
+                column-count: 3;
+                column-gap: 12px;
+            }
+
+            .cycler {
+                position: relative;
+            }
+
+            .cycler img:first-child {
+                position: relative;
+                z-index: 1;
+            }
+
+            .cycler img:not(:first-child) {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+
+            .cycler img.active {
+                z-index: 3;
+            }
+
+            .slidepanels img {
+                /* Just in case there are inline attributes */
+                width: 100% !important;
+                height: auto !important;
+                border-radius: 4px;
+                margin-top: 3.6%;
+            }
+
+            @media (max-width: 620px) {
+                .slidepanels {
+                    -moz-column-count: 3;
+                    -webkit-column-count: 3;
+                    column-count: 3;
+                }
+                .navigation_type_horizontal {
+                    padding-left: 12%;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .slidepanels {
+                    -moz-column-count: 2;
+                    -webkit-column-count: 2;
+                    column-count: 2;
+                }
+            }
+
+        </style>
+
+        <section id="three" style="display: none;">
+            <div class="panel">
+
+                <h1>Videos</h1>
+
+                <ul class="video-items puzzle">
+                    <li class="main">
+                        <a href="/ch/loootta/v/5608933">
+                            <img alt=" " src="http://i2.cdn.turner.com/money/dam/assets/180207173535-videocard-ehang-drone-passenger-1280x720.jpeg">
+                            <span class="title">
+                              <span class="title-text text-ellipsis">
+                                <svg id="playSVG" viewBox="0 0 24 24">
+        <path class="ds-shape-primary" d="M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M9,17 L17.0018184,12.0012122 L9,7 L9,17 Z"></path>
+      </svg>
+                              </span>
+                              <span class="title-bg"></span>
+                            </span>
+                          </a>
+                    </li>
+                    <li>
+                        <a href="/ch/191919/v/5608875">
+                            <img alt="" src="http://i2.cdn.turner.com/money/dam/assets/180329110858-new-york-auto-show-porsche-911-video-card-1280x720.jpeg">
+                            <span class="title">
+                              <span class="title-text text-ellipsis">
+                                <svg id="playSVG" viewBox="0 0 24 24">
+        <path class="ds-shape-primary" d="M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M9,17 L17.0018184,12.0012122 L9,7 L9,17 Z"></path>
+      </svg>
+                              </span>
+                              <span class="title-bg"></span>
+                            </span>
+                          </a>
+                    </li>
+                    <li>
+                        <a href="/ch/191919/v/5608677">
+                            <img alt="" src="https://i.ytimg.com/vi/VpnuoUvGfQ8/maxresdefault.jpg">
+                            <span class="title">
+                              <span class="title-text text-ellipsis">
+                                <svg id="playSVG" viewBox="0 0 24 24">
+        <path class="ds-shape-primary" d="M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M9,17 L17.0018184,12.0012122 L9,7 L9,17 Z"></path>
+      </svg>
+                              </span>
+                              <span class="title-bg"></span>
+                            </span>
+                          </a>
+                    </li>
+                    <li>
+                        <a href="/ch/191919/v/5608066">
+                            <img alt="" src="https://i.ytimg.com/vi/Pv8vuvfrN8Y/maxresdefault.jpg">
+                            <span class="title">
+                              <span class="title-text text-ellipsis">
+                                <svg id="playSVG" viewBox="0 0 24 24">
+        <path class="ds-shape-primary" d="M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M9,17 L17.0018184,12.0012122 L9,7 L9,17 Z"></path>
+      </svg>
+                              </span>
+                              <span class="title-bg"></span>
+                            </span>
+                          </a>
+                    </li>
+                    <li>
+                        <a href="/ch/sis95/v/5552034">
+                            <img alt="" src="http://timgs.wecandeo.com/thumb/179/20131115/16/0420_1964e_00001_640_360.jpg">
+                            <span class="title">
+                              <span class="title-text text-ellipsis">
+                                <svg id="playSVG" viewBox="0 0 24 24">
+        <path class="ds-shape-primary" d="M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M9,17 L17.0018184,12.0012122 L9,7 L9,17 Z"></path>
+      </svg>
+                              </span>
+                              <span class="title-bg"></span>
+                            </span>
+                          </a>
+                    </li>
+                    <li>
+                        <a href="/ch/loootta/v/5608933">
+                            <img alt=" " src="http://i2.cdn.turner.com/money/dam/assets/180207173535-videocard-ehang-drone-passenger-1280x720.jpeg">
+                            <span class="title">
+                              <span class="title-text text-ellipsis">
+                                <svg id="playSVG" viewBox="0 0 24 24">
+        <path class="ds-shape-primary" d="M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M9,17 L17.0018184,12.0012122 L9,7 L9,17 Z"></path>
+      </svg>
+                              </span>
+                              <span class="title-bg"></span>
+                            </span>
+                          </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <style>
+            .video-items.puzzle li {
+                float: left;
+                position: relative;
+                margin: 0.2%;
+                flex-basis: 20%;
+                width: 15%;
+                overflow: hidden;
+                display: block;
+            }
+
+            .video-items.puzzle .main a {
+                height: 0;
+                padding-bottom: 56.25%;
+            }
+
+            .video-items.puzzle li a {
+                border: 1px solid #ddd;
+                display: block;
+                position: relative;
+                height: 0;
+                padding-bottom: 56.25%;
+                margin-bottom: -2px;
+                margin-left: -2px;
+                background: #000;
+                text-align: center;
+            }
+
+            .video-items.puzzle li a img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .video-items.puzzle li a .title {}
+
+            .video-items.puzzle li a .title-text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 100;
+                display: block;
+            }
+
+            .video-items.puzzle li a .title-bg {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                background: #0000004a;
+                opacity: .5;
+            }
+
+            .video-items.puzzle {
+                overflow: hidden;
+                padding: 0.2%;
+                display: flex;
+            }
+
+            .poptags {
+                box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.23);
+            }
+
+            #playSVG {
+                height: 4rem;
+                width: 4rem;
+                fill: #ffffff;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+
+        </style>
+
+
+        <section id="four" style="display: none;">
+
+
+            <div class="panel">
+                <h1>Mercury</h1>
+                <p>Mercury is the closest planet to the sun. As such, it circles the sun faster than all the other planets, which is why Romans named it after their swift-footed messenger god.</p>
+                <p>The Sumerians also knew of Mercury since at least 5,000 years ago. It was often associated with Nabu, the god of writing. Mercury was also given separate names for its appearance as both a morning star and as an evening star. Greek astronomers knew, however, that the two names referred to the same body, and Heraclitus, around 500 B.C., correctly thought that both Mercury and Venus orbited the sun, not Earth.</p>
+                <h2>A year on Mercury is just 88 days long.</h2>
+                <p>One solar day (the time from noon to noon on the planetâ€™s surface) on Mercury lasts the equivalent of 176 Earth days while the sidereal day (the time for 1 rotation in relation to a fixed point) lasts 59 Earth days. Mercury is nearly tidally locked to the Sun and over time this has slowed the rotation of the planet to almost match its orbit around the Sun. Mercury also has the highest orbital eccentricity of all the planets with its distance from the Sun ranging from 46 to 70 million km.</p>
+                <h2>Mercury is the smallest planet in the Solar Systm.</h2>
+                <p>One of five planets visible with the naked eye a, Mercury is just 4,879 Kilometres across its equator, compared with 12,742 Kilometres for the Earth.</p>
+                <h2>Mercury is the second densest planet.</h2>
+                <p>Even though the planet is small, Mercury is very dense. Each cubic centimetre has a density of 5.4 grams, with only the Earth having a higher density. This is largely due to Mercury being composed mainly of heavy metals and rock.</p>
+                <h2>Mercury has wrinkles.</h2>
+                <p>As the iron core of the planet cooled and contracted, the surface of the planet became wrinkled. Scientist have named these wrinkles, Lobate Scarps. These Scarps can be up to a mile high and hundreds of miles long.</p>
+                <br>
+            </div>
+        </section>
+    </div>
+    <script>
+        (function($) {
+
+            var tabs = $(".tabs li a");
+
+            tabs.click(function() {
+                var content = this.hash.replace('/', '');
+                tabs.removeClass("active");
+                $(this).addClass("active");
+                $("#content").find('section').hide();
+                $(content).fadeIn(200);
+            });
+
+        })(jQuery);
+
+    </script>
+</div>
+
+<style>
+    #notes {
+        padding: 0px 40px 0px 40px;
+        max-width: 700px;
+    }
+
+    .note {
+        min-height: 45px;
+        border-radius: 1px;
+        cursor: pointer;
+        transition: transform .5s;
+        padding: 10px 0;
+        margin: 0.3rem;
+    }
+
+    .note:hover {}
+
+    #notes>div:nth-child(n+1) {
+        margin-bottom: 0px;
+    }
+
+    #notes>div:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+
+    .note span {
+        vertical-align: top;
+        font-weight: 500;
+        color: #1d00cc;
+    }
+
+    .note span.green {
+        color: #0aa701;
+        font-weight: 500;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .note .line.med {
+        font-size: 15px;
+    }
+
+    .note .line.small {
+        color: #525151;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 4px;
+        font-family: breezesans;
+    }
+
+    .note .line.large {
+        margin-top: 2px;
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    #no-cards {
+        display: none;
+        margin-top: 5px;
+    }
+
+</style>
+<style>
+    .containing {
+        display: flex;
+    }
+
+    .panel {
+        position: relative;
+        transition: all 0.2s;
+        color: black;
+        padding: 0px 40px 0px 40px;
+    }
+
+    .panel h1 {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0 0 0 0;
+        letter-spacing: 3px;
+        top: 0;
+        padding: 10px 0 0 0;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .panel h1::after {
+        width: 30px;
+        height: 2px;
+        background: black;
+        display: block;
+        content: '';
+        margin-bottom: 26px;
+        margin-top: 8px;
+    }
+
+    .panel p {
+        color: #909090;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: "Roboto Mono";
+    }
+
+    .panel img {
+        margin-top: 0.6rem;
+        border-radius: 2px;
+        width: 100%;
+    }
+
+    .panel h2::after {
+        width: 30px;
+        height: 2px;
+        background: black;
+        display: block;
+        content: '';
+        margin-top: 8px;
+    }
+
+    .panel h2 {
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+
+</style>
+
+
+<style>
+    ._1fgQj {
+        margin: 0.4rem 0.4rem;
+    }
+
+    ._2634o {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.18);
+        text-transform: capitalize;
+        display: block;
+        font-weight: 600;
+        transition: background-color .15s ease-in-out;
+        text-decoration: none;
+        padding: 14px;
+        color: #000000;
+    }
+
+    .x1MBX {
+        margin: 4px 4px;
+        overflow: hidden;
+        border-radius: 3px;
+        text-align: center;
+        /*flex-basis: 100px;*/
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        flex-shrink: 0;
+        max-width: 250px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .R6-Wf {
+        flex-wrap: nowrap;
+        display: flex;
+        background: #ffffff;
+        overflow-x: visible;
+        overflow-y: hidden;
+    }
+
+    .R6-Wf::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+    .R6-Wf::-webkit-scrollbar-thumb {
+        background-color: #555;
+    }
+
+    .R6-Wf div:nth-child(6n-5) {
+        background: #ecec84 url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+    .R6-Wf div:nth-child(6n-4) {
+        background: #ffb69b url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+    .R6-Wf div:nth-child(6n-3) {
+        background: #ffacbb url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+    .R6-Wf div:nth-child(6n-2) {
+        background: #8bc3e5 url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+    .R6-Wf div:nth-child(6n-1) {
+        background: #a299ca url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+    .R6-Wf div:nth-child(6n) {
+        background: #7ccaae url(http://www.graphicartsunit.com/images/noise.png);
+    }
+
+</style>

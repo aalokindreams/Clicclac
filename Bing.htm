@@ -1,0 +1,433 @@
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" id="viewport" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="noimageindex, noarchive" name="robots">
+    <meta content="yes" name="mobile-web-app-capable">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,600,900%7CRoboto+Mono:300,400,500,700" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-weight: 400;
+            line-height: 1.6;
+            font-family: "Roboto mono", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #f0f0f0;
+            font-size: 16px;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            vertical-align: baseline;
+            list-style-type: none;
+            border: 0;
+            outline: 0;
+        }
+
+        input::placeholder {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000;
+            background: none;
+            font-weight: normal;
+            margin: 0;
+            overflow: hidden;
+            padding-top: 0.5em;
+            padding-bottom: 0.17em;
+            border-bottom: 1px solid #a2a9b1;
+        }
+
+    </style>
+</head>
+
+<style>
+    #image {
+        width: 100%;
+        height: auto;
+    }
+
+    .pincodemain {
+        fill: none;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.37);
+        border-radius: 50%;
+        background: #fff;
+        padding: 0px;
+        stroke: #1ed760;
+        margin: 0px 0.4rem 0 0.2rem;
+        width: 3rem !important;
+        height: 3rem !important;
+
+    }
+
+    .topright {
+        align-self: center;
+    }
+
+    .hidemob {
+        align-self: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .logo {
+        height: 3rem;
+    }
+
+    .logo span {
+        font-family: "Poiret One", cursive;
+        align-self: center;
+        align-items: center;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+</style>
+<div class="row">
+    <div class="logo"><span>Arin</span></div>
+    <div class="formcon">
+        <form class="form-inline " id="search-form" name="search-form" onsubmit="return search()">
+            <div width="100%" class="form_container">
+                <div class="d3" style="width:100%;">
+                    <input class="form-control search-field" type="search" id="query" style="width:100%;" placeholder="Search">
+                </div>
+                <button class="search-btn" type="submit" id="search-btn" name="search-btn">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 57.966 57.966" class="srchicon">
+                      <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path>
+                   </svg>                
+                            </button>
+            </div>
+        </form>
+        <div>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                            </svg>
+        </div>
+        <div>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+             </svg>
+        </div>
+
+    </div>
+
+    <div class="hidemob">
+        <div class="topright">
+            <svg class="pincodeMain" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" x="0px" y="0px">
+                <g id="art">
+                   <image id="image" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://instagram.fblr1-4.fna.fbcdn.net/vp/68bc67eaad0b19b49e1033ed9eb78d3d/5D2C8D3A/t51.2885-15/e35/50696122_401850077058078_6471542720683272343_n.jpg?_nc_ht=instagram.fblr1-4.fna.fbcdn.net" preserveAspectRatio="xMidYMid slice"></image>
+                </g>
+             </svg>
+        </div>
+    </div>
+</div>
+
+<style>
+    .ticons {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        display: block;
+        margin: 0px 0 0 0.8rem;
+        height: 2.6rem;
+        stroke-linejoin: round;
+        transition: .2s ease;
+        filter: drop-shadow(0px 1px 2px #00000055);
+    }
+
+    .row {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        width: 100%;
+        top: 0px;
+        padding: 0.4rem 2rem;
+        /* box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.08);*/
+    }
+
+    .formcon {
+        padding: 0.2rem 0.4rem;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-inline {
+        align-self: center;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .form_container {
+        display: flex;
+        border: solid 0px transparent;
+        border-radius: 6px;
+        background: transparent;
+        background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ffffff, #ffffff);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.33);
+    }
+
+
+    button {
+        background-image: linear-gradient(dimgrey, black, #5f5f5f);
+        border: none;
+        outline: none;
+        color: white;
+        border-radius: 0 5px 5px 0;
+        padding: 0rem 0.4rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19); */
+    }
+
+    .search-btn {
+        height: 3rem;
+        padding: 0rem 0.6rem;
+    }
+
+    .srchicon {
+        fill: #ffffff;
+        height: 2rem;
+        margin: 0rem 0.1rem;
+    }
+
+    .search-field {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 4px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        padding: 0rem 1rem;
+        /* background-image: linear-gradient(whitesmoke, #e6e6e6); */
+        color: #000;
+        height: 3rem;
+        font-size: 1.1rem;
+        /* box-shadow: 0px 0px 0px 3px rgb(0, 0, 0); */
+    }
+
+    .d3 {
+        border-radius: 4px 0 0 4px;
+    }
+
+    .srchicon {
+        fill: #ffffff;
+        height: 2rem;
+        margin: 0rem 0.1rem;
+    }
+
+</style>
+<style>
+    @media screen and (max-width: 600px) {
+        .row {
+            padding: 0.4rem 0.4rem;
+        }
+        .ticons {
+            margin: 0px 0 0 0.4rem;
+        }
+    }
+
+    @media screen and (max-width: 1199px) and (min-width: 601px) {
+        .row {
+            padding: 0.4rem 0.4rem;
+        }
+        .ticons {
+            margin: 0px 0 0 0.6rem;
+        }
+
+    }
+
+    @media screen and (min-width: 1200px) {
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #555;
+        }
+        .row {
+            padding: 0.4rem 2rem;
+        }
+        .ticons {
+            margin: 0px 0 0 0.8rem;
+        }
+    }
+
+</style>
+<div class="bodycon">
+    <div class="navcon">
+        <div class="logoicon">
+            <svg class="logoogle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path></defs><clipPath id="b"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"></path><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"></path></svg>
+        </div>
+        <div class="logoicon">
+            <svg class="logoogle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"><path d="M28.111,5.022l-1.215-3.655C26.625,0.55,25.861,0,25,0H7C6.138,0,5.375,0.55,5.102,1.367  L3.877,5.024C2.833,5.091,2,5.939,2,7v3c0,1.104,0.896,2,2,2h1.034c0,0.075-0.03,0.146-0.021,0.221l2,18C7.125,31.232,7.98,32,9,32  h14c1.02,0,1.875-0.768,1.986-1.779l2-18c0.01-0.075-0.021-0.146-0.021-0.221H28c1.104,0,2-0.896,2-2V7  C30,5.935,29.16,5.083,28.111,5.022z M7,2h18l1,3H6L7,2z M9,30l-0.333-3h14.666L23,30H9z M23.443,26H8.555L7.444,16h17.111  L23.443,26z M24.666,15H7.333L7,12h18L24.666,15z M28,10H4V7h24V10z" fill="#333333" id="cup"></path></svg>
+        </div>
+        <div class="logoicon">
+            <svg class="logoogle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"><path clip-rule="evenodd" d="M25.914,13.143C25.477,8.58,21.678,5,17,5  c-3.619,0-6.717,2.148-8.146,5.23C8.424,10.094,7.976,10,7.501,10c-2.485,0-4.5,2.016-4.5,4.5c0,0.494,0.099,0.961,0.246,1.404  c-1.933,1.127-3.246,3.195-3.246,5.594c0,3.59,2.91,6.5,6.5,6.5V28H24.5v-0.002c4.143,0,7.5-3.357,7.5-7.5  C32,16.842,29.379,13.805,25.914,13.143z M24.5,25.998V26H6.501c-2.481-0.002-4.5-2.02-4.5-4.502c0-1.6,0.843-3.045,2.254-3.867  c1.371-0.787,1.465-0.943,0.89-2.357c-0.097-0.291-0.144-0.544-0.144-0.773c0-1.379,1.121-2.5,2.5-2.5c0,0,0.656-0.047,1.353,0.23  c1.147,0.457,1.272,0.02,1.814-1.159C11.815,8.599,14.3,7,17,7c3.6,0,6.576,2.723,6.924,6.334c0.123,1.432,0.123,1.432,1.615,1.773  C28.125,15.601,30,17.869,30,20.498C30,23.531,27.533,25.998,24.5,25.998z" fill="#333333" fill-rule="evenodd" id="cloud"></path></svg>
+        </div>
+    </div>
+    <div class="contentcon">
+
+        <div class="infocon">
+            <div class="textcon">
+                <section class="poptags">
+
+                    <div class="mw-parser-output">
+                        <h1 id="firstHeading" class="firstHeading" lang="en">Black Pink</h1>
+
+                        <p><b>Black Pink</b> (<a href="/wiki/Hangul" title="Hangul">Hangul</a>: 블랙핑크), stylized as <b>BLACKPINK</b> or <b>BLΛƆKPIИK</b>, is a South Korean <a href="/wiki/Girl_group" title="Girl group">girl group</a> formed by <a href="/wiki/YG_Entertainment" title="YG Entertainment">YG Entertainment</a>, consisting of members Jisoo, Jennie, Rosé and Lisa.
+                        </p>
+                        <p>The group debuted on August 8, 2016, with their single <i>Square One</i>, which spawned their first number-one single in their home country, "<a href="/wiki/Whistle_(Black_Pink_song)" title="Whistle (Black Pink song)">Whistle</a>." The single also included "<a href="/wiki/Boombayah" title="Boombayah">Boombayah</a>," their first number one on <i><a href="/wiki/Billboard_(magazine)" title="Billboard (magazine)">Billboard</a></i> <a href="/wiki/World_Digital_Songs" class="mw-redirect" title="World Digital Songs">World Digital Songs</a> chart, which set the record as the most-viewed debut music video by a Korean act. With the group's commercial success in their first five months, they were hailed as the New Artist of the Year at the 31st <a href="/wiki/Golden_Disc_Awards" title="Golden Disc Awards">Golden Disc Awards</a> and the 26th <a href="/wiki/Seoul_Music_Awards" title="Seoul Music Awards">Seoul Music Awards</a>.
+                        </p>
+                        <p>Black Pink is the highest-charting female K-pop act on <i>Billboard</i> <a href="/wiki/Hot_100" class="mw-redirect" title="Hot 100">Hot 100</a>, peaking at number 55.<sup id="cite_ref-US_200_1-0" class="reference"><a href="#cite_note-US_200-1">[1]</a></sup> They are the first and only K-pop girl group and the second K-pop act overall, besides <a href="/wiki/NCT_(band)" title="NCT (band)">NCT</a>, to enter <i>Billboard</i>'s <a href="/wiki/Emerging_Artists" class="mw-redirect" title="Emerging Artists">Emerging Artists</a> chart and lead it.<sup id="cite_ref-US_200_1-1" class="reference"><a href="#cite_note-US_200-1">[1]</a></sup> They are also the first female K-pop group to have four number-one singles on <i>Billboard'</i>s World Digital Song Sales chart.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup><sup id="cite_ref-US_200_1-2" class="reference"><a href="#cite_note-US_200-1">[1]</a></sup>
+                        </p>
+
+
+                        <h2><span class="mw-headline" id="History">History</span></h2>
+                        <h3><span class="mw-headline" id="2016:_Debut_with_Square_One_and_Square_Two">2016: Debut with <i>Square One</i> and <i>Square Two</i></span></h3>
+
+                        <p>With promotional preparations beginning in August 2016 with the release of teaser images and participation in songs and advertisements,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> <a href="/wiki/YG_Entertainment" title="YG Entertainment">YG Entertainment</a> revealed the final line-up and name of the group on June 29, 2016.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup>
+                        </p>
+                        <p>Black Pink became the first girl group that debuted under YG Entertainment in six years after <a href="/wiki/2NE1" title="2NE1">2NE1</a>,<sup id="cite_ref-:0_7-0" class="reference"><a href="#cite_note-:0-7">[7]</a></sup> with their debut single <i><a href="/wiki/Whistle_(Black_Pink_song)" title="Whistle (Black Pink song)">Square One</a></i>, which was released on August 8, 2016.<sup id="cite_ref-:0_7-1" class="reference"><a href="#cite_note-:0-7">[7]</a></sup><sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> The first lead single, "<a href="/wiki/Whistle_(Black_Pink_song)" title="Whistle (Black Pink song)">Whistle</a>," was produced by <a href="/wiki/Teddy_Park" title="Teddy Park">Teddy Park</a> and Future Bounce and was written by Teddy Park, <a href="/wiki/IKon_(South_Korean_band)" title="IKon (South Korean band)">iKon</a>'s <a href="/wiki/B.I_(rapper)" title="B.I (rapper)">Kim Hanbin</a>, and <a href="/wiki/Bekuh_BOOM" title="Bekuh BOOM">Bekuh BOOM</a>.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup><sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup> The second lead single, "<a href="/wiki/Boombayah" title="Boombayah">Boombayah</a>," was produced by Teddy Park and co-written by Bekuh BOOM.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup> Its music video was directed by Seo Hyun-seung.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup> The two title tracks charted at number one and two on the <a href="/wiki/Billboard_(magazine)" title="Billboard (magazine)"><i>Billboard</i></a> World Digital Songs chart, and Black Pink are the fastest act to do so and the third Korean artist or group to hold the top two positions after label mates <a href="/wiki/Psy" title="Psy">Psy</a> and <a href="/wiki/Big_Bang_(South_Korean_band)" title="Big Bang (South Korean band)">Big Bang</a>.<sup id="cite_ref-SquareOneUS_13-0" class="reference"><a href="#cite_note-SquareOneUS-13">[13]</a></sup> "Whistle" topped the digital, download, streaming, and mobile charts on <a href="/wiki/Gaon_Music_Chart" title="Gaon Music Chart">Gaon</a> in August 2016.<sup id="cite_ref-chart_14-0" class="reference"><a href="#cite_note-chart-14">[14]</a></sup> They also reached number one on the weekly, popularity, music video, and K-pop music video charts of China's biggest music-streaming website <a href="/wiki/QQ_Music" title="QQ Music">QQ Music</a>.<sup id="cite_ref-Blackpink_wraps_up_15-0" class="reference"><a href="#cite_note-Blackpink_wraps_up-15">[15]</a></sup> Black Pink's first music show performance was aired on August 14, 2016 on <a href="/wiki/Seoul_Broadcasting_System" title="Seoul Broadcasting System">SBS</a>' <i><a href="/wiki/Inkigayo" title="Inkigayo">Inkigayo</a></i>.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup> They won first place on <i>Inkigayo</i> 13 days after their debut, and broke the record for the shortest time for a girl group to win on a music program after debut. They wrapped up their promotions for <i>Square One</i> on September 11, 2016 with another win on <i>Inkigayo</i>.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</div>
+<style>
+    header {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #f0f0f0;
+        padding: 0.5rem;
+    }
+
+    .bodycon {
+        flex: 3 1 auto;
+        -webkit-flex: 3 1 auto;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row;
+        flex-flow: row;
+        background: #f0f0f0;
+        border: none;
+    }
+
+    .logoogle {
+        fill: none;
+        height: 3.5rem;
+        padding: 6px;
+        box-shadow: 1px 2px 5px rgb(212, 212, 212);
+        width: 3.5rem;
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    .navcon {
+        flex: 2 1 3%;
+        padding: 0 0.5rem;
+        -webkit-flex: 2 1 3%;
+    }
+
+    .contentcon {
+        flex: 2 1 97%;
+        -webkit-flex: 2 1 97%;
+    }
+
+    .textcon {
+        flex: 2 1 68%;
+        -webkit-flex: 2 1 68%;
+    }
+
+    .language {
+        box-shadow: 1px 2px 5px rgb(212, 212, 212);
+        padding: 0.5rem;
+        margin: 0 0.5rem;
+        outline: none;
+        font-size: 1.2rem;
+        height: 3.5rem;
+        border-radius: 8px;
+        border: 0px;
+    }
+
+    .more {
+        background: #ffffff;
+        text-align: right;
+        padding: 10px;
+    }
+
+    .more span {
+        padding: 0px;
+        color: 000;
+        font-weight: bold;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .infocon {
+        flex: 3 1 auto;
+        -webkit-flex: 3 1 auto;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row;
+        flex-flow: row;
+        background: #f0f0f0;
+        border: none;
+    }
+
+    .poptags {
+        padding: 0 0.5rem;
+        background: #FFFFFF;
+        margin: 0.5rem 0.5rem 1rem 0.5rem;
+        box-shadow: 1px 2px 5px rgb(212, 212, 212);
+        border-radius: 8px;
+    }
+
+    .featured-article-line {
+        padding: 10px 0px;
+        flex: 2 1 100%;
+        -webkit-flex: 2 1 100%;
+        font-weight: bold;
+        font-family: Arial;
+        text-transform: uppercase;
+    }
+
+    .logoicon {
+        margin: 0.5rem 0 1rem 0;
+    }
+
+</style>

@@ -1,0 +1,521 @@
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" id="viewport" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="noimageindex, noarchive" name="robots">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+    <meta content="yes" name="mobile-web-app-capable">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,600,900%7CRoboto+Mono:300,400,500,700" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: "Roboto mono", Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            vertical-align: baseline;
+            list-style-type: none;
+            border: 0;
+            outline: 0;
+        }
+
+    </style>
+</head>
+
+<div class="row">
+    <div class="topright">
+        <svg class="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"><path d="M30.402 7.094c-1.058.47-2.198.782-3.392.928 1.218-.725 2.154-1.885 2.595-3.256-1.134.674-2.405 1.165-3.75 1.43-1.077-1.148-2.612-1.862-4.31-1.862-3.268 0-5.915 2.635-5.915 5.893 0 .464.056.91.155 1.34-4.915-.244-9.266-2.59-12.18-6.158-.51.87-.806 1.885-.806 2.96 0 2.044 1.045 3.847 2.633 4.905-.974-.032-1.883-.3-2.68-.736v.07c0 2.857 2.034 5.236 4.742 5.773-.498.138-1.022.21-1.56.21-.38 0-.75-.034-1.11-.103.75 2.344 2.93 4.042 5.518 4.09-2.024 1.58-4.57 2.523-7.333 2.523-.478 0-.952-.032-1.41-.085 2.613 1.674 5.72 2.65 9.054 2.65 10.872 0 16.814-8.976 16.814-16.765 0-.254-.008-.507-.018-.762 1.155-.83 2.155-1.868 2.95-3.047z"></path></svg>
+    </div>
+    <div class="formcon">
+        <form class="form-inline " id="search-form" name="search-form" onsubmit="return search()">
+            <div width="100%" class="form_container">
+                <div class="d3" style="width:100%;">
+                    <input class="form-control search-field" type="search" id="query" style="width:100%;" placeholder="Search">
+                </div>
+                <button class="search-btn" type="submit" id="search-btn" name="search-btn">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 57.966 57.966" class="srchicon">
+                      <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path>
+                   </svg>                
+                            </button>
+            </div>
+        </form>
+        <div>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                            </svg>
+        </div>
+        <div>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+             </svg>
+        </div>
+    </div>
+    <div class="hidemob">
+        <div class="topright">
+            <svg class="pincodeMain" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" x="0px" y="0px">
+                <g id="art">
+                   <image id="image" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://vignette.wikia.nocookie.net/loonatheworld/images/6/6d/Yves_debut_photo_6.png/revision/latest/scale-to-width-down/350?cb=20171120144804" preserveAspectRatio="xMidYMid slice"></image>
+                </g>
+             </svg>
+        </div>
+    </div>
+</div>
+<style>
+    .row {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        width: 100%;
+        top: 0px;
+        padding: 0.2rem 2rem;
+    }
+
+    .ticons,
+    .heart {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: .2s ease;
+        filter: drop-shadow(0px 1px 2px #00000055);
+    }
+
+    .heart {
+        height: 3.3rem;
+        width: 3.3rem;
+        margin: 0 1rem;
+        fill: #b932fd !important;
+        stroke: none;
+    }
+
+    .topright {
+        align-self: center;
+    }
+
+    .formcon {
+        padding: 0.2rem 0.4rem;
+        display: flex;
+        background: #ffffff;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-inline {
+        align-self: center;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .form_container {
+        display: flex;
+        border: solid 3px transparent;
+        border-radius: 10px;
+        background: transparent;
+        /* background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ffffff, #ffffff); */
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.33);
+    }
+
+    .d3 {
+        border-radius: 5px 0 0 5px;
+    }
+
+    .search-field {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 4px;
+        border-radius: 8px 0 0 8px;
+        outline: none;
+        padding: 0rem 1rem;
+        background-image: linear-gradient(whitesmoke, #e6e6e6);
+        color: #000;
+        height: 3rem;
+        font-size: 1.1rem;
+        /* box-shadow: 0px 0px 0px 3px rgb(0, 0, 0); */
+    }
+
+    .search-btn {
+        height: 3rem;
+        padding: 0rem 0.6rem;
+    }
+
+    button {
+        background-image: linear-gradient(dimgrey, black, #5f5f5f);
+        border: none;
+        outline: none;
+        color: white;
+        border-radius: 0 8px 8px 0;
+        padding: 0rem 0.4rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19); */
+    }
+
+    .srchicon {
+        fill: #ffffff;
+        height: 2rem;
+        margin: 0rem 0.1rem;
+    }
+
+    .ticons {
+        display: block;
+        margin: 0px 0 0 1rem;
+        height: 2.8rem;
+    }
+
+    .hidemob {
+        align-self: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .pincodemain {
+        margin: 0px 0rem;
+        width: 3.3rem !important;
+        height: 3.3rem !important;
+        fill: none;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.37);
+        border-radius: 8px;
+        background: #fff;
+        padding: 2px;
+        stroke: #1ed760;
+    }
+
+    #image {
+        width: 100%;
+        height: auto;
+    }
+
+</style>
+<div class="panel">
+    <div class="flexy">
+        <div class="kiwi">
+            <h1 class="heading1" id="zero">The Lord of the Rings</h1>
+            <ol class="chapter">
+                <li class="affix" style="font-weight: bold; font-size: 1.2rem">Contents</li>
+                <li class="affix"><a href="#zero" class="active" tabindex="0"> Introduction</a></li>
+                <li><a href="#one" tabindex="0"><strong aria-hidden="true">1.</strong> Development</a></li>
+                <li><a href="#two" tabindex="0"><strong aria-hidden="true">2.</strong> Response</a></li>
+                <li><a href="#three" tabindex="0"><strong aria-hidden="true">3.</strong> Change from Book</a></li>
+                <li>
+                    <ol class="section">
+                        <li><a href="#four" tabindex="0"><strong aria-hidden="true">3.1.</strong> Tourism</a></li>
+                        <li><a href="#seemore" tabindex="0"><strong aria-hidden="true">3.2.</strong> See More</a></li>
+                    </ol>
+                </li>
+            </ol>
+            <p>The Lord of the Rings is a film series of three epic fantasy adventure films directed by Peter Jackson, based on the novel The Lord of the Rings by J. R. R. Tolkien. The films are subtitled The Fellowship of the Ring (2001), The Two Towers (2002) and The Return of the King (2003). They are a New Zealand-American venture, produced by WingNut Films and The Saul Zaentz Company and distributed by New Line Cinema.</p>
+            <p>Set in the fictional world of Middle-earth, the films follow the hobbit Frodo Baggins (Elijah Wood) as he and the Fellowship embark on a quest to destroy the One Ring, to ensure the destruction of its maker, the Dark Lord Sauron. The Fellowship eventually splits up and Frodo continues the quest with his loyal companion Sam (Sean Astin) and the treacherous Gollum (Andy Serkis). Meanwhile, Aragorn (Viggo Mortensen), heir in exile to the throne of Gondor, along with Legolas (Orlando Bloom), Gimli (John Rhys-Davies), Merry (Dominic Monaghan), Pippin (Billy Boyd) and the wizard Gandalf (Ian McKellen), unite to rally the Free Peoples of Middle-earth in the War of the Ring in order to aid Frodo by weakening Sauron's forces.</p>
+            <h2 class="underline--magical" id="one">Development</h2>
+            <p>Jackson decided to move ahead with King Kong before filming The Lord of the Rings, prompting Universal to enter a deal with Miramax to receive foreign earnings from The Lord of the Rings while Miramax received foreign earnings from King Kong.[18] It was also revealed that Jackson originally wanted to finish King Kong before The Lord of the Rings began. But due to location problems, he decided to start with The Lord of the Rings franchise instead. When Universal cancelled King Kong in 1997,[19] Jackson and Walsh immediately received support from Weinstein and began a six-week process of sorting out the rights. </p>
+            <p>Jackson and Walsh asked Costa Botes to write a synopsis of the book and they began to re-read the book. Two to three months later, they had written their treatment.[20] The first film would have dealt with what would become The Fellowship of the Ring, The Two Towers, and the beginning of The Return of the King, ending with Saruman's death, and Gandalf and Pippin going to Minas Tirith. In this treatment, Gwaihir and Gandalf visit Edoras after escaping Saruman, Gollum attacks Frodo when the Fellowship is still united, and Farmer Maggot, Glorfindel, Radagast, Elladan and Elrohir are present. Bilbo attends the Council of Elrond, Sam looks into Galadriel's mirror, Saruman is redeemed before he dies and the Nazgûl just make it into Mount Doom before they fall.[20] They presented their treatment to Harvey and Bob Weinstein, the latter of whom they focused on impressing with their screenwriting as he had not read the book. They agreed upon two films and a total budget of $75 million.</p>
+            <p>The Sumerians also knew of Mercury since at least 5,000 years ago. It was often associated with Nabu, the god of writing. Mercury was also given separate names for its appearance as both a morning star and as an evening star. Greek astronomers knew, however, that the two names referred to the same body, and Heraclitus, around 500 B.C., correctly thought that both Mercury and Venus orbited the sun, not Earth.</p>
+            <h2 class="underline--magical" id="two">Public and critical response </h2>
+            <p>Unadjusted for inflation, The Lord of the Rings film series is the highest-grossing film trilogy worldwide of all time, higher even than other film franchises such as the original Star Wars trilogy and The Godfather trilogy.[61] The film series grossed a total of $2.918 billion[d] and also tied a record with Ben-Hur (1959) and Titanic (1997) for the total number of Academy Awards won for a single film, with The Return of the King receiving eleven Oscars.[62] The majority of critics have also praised the series, with Kenneth Turan of the Los Angeles Times writing that "the trilogy will not soon, if ever, find its equal".[63] Some were critical of the films' pacing and length: "It's a collection of spectacular set pieces without any sense of momentum driving them into one another" according to Philadelphia Weekly</p>
+            <h2 class="underline--magical" id="three">Reactions to changes in the films from the books</h2>
+            <p>Various changes to characters such as Gandalf, Aragorn, Arwen, Denethor, Faramir, Gimli, and Frodo, when considered together, were seen by some to alter the tone and themes found in the books. Several critics contend that the portrayal of women, especially Arwen, in the films is thematically faithful to (or compatible with) Tolkien's writings despite some differences. Wayne G. Hammond, a Tolkien scholar,[88][89] said of the first two films that he found them to be "travesties as adaptations... faithful only on a basic level of plot" and that many characters had not been depicted faithfully to their appearance in the novel. Other critics have argued that Tolkien's characters were weakened and misinterpreted by their portrayal in the films. Changes to events (such as the Elves participating at the Battle of Helm's Deep,[95] </p>
+            <p>Faramir taking the hobbits to Osgiliath,[96] and the deletion of the chapter "The Scouring of the Shire") are also seen as changing Tolkien's themes.[96] Janet Brennan Croft criticized the films using Tolkien's own terms "anticipation" and "flattening", which she used in critiquing a proposed film script. She contrasts Tolkien's subtlety with Jackson's tendency to show "too much too soon".[97] Supporters of the series assert that it is a worthy interpretation of the book and that most of the changes were necessary.[30] Many who worked on the series are fans of the book, including Christopher Lee, who (alone among the cast) had actually met Tolkien in person,[98] and Boyens once noted that no matter what, it is simply their interpretation of the book. Jackson once said that to simply summarize the story on screen would be a mess, and in his own words, "Sure, it's not really The Lord of the Rings... but it could still be a pretty damn cool movie."[99][100] </p>
+            <h2 class="underline--magical" id="four">Effects on the film industry and tourism</h2>
+            <p>As a result of the series' success, Peter Jackson has become a major figure in the film business (sometimes called a mogul) in the mold of Steven Spielberg and George Lucas, in the process befriending some industry heavyweights like Bryan Singer and Frank Darabont. Jackson has since founded his own film production company, Wingnut Films, as well as Wingnut Interactive, a video game company. He was also finally given a chance to remake King Kong in 2005. The film was a critical and box office success, although not as successful as The Lord of the Rings series. Jackson has been called a "favourite son" of New Zealand.[110] In 2004, Howard Shore toured with The Lord of the Rings Symphony, playing two hours of the score. Along with the Harry Potter films, the series has renewed interest in the fantasy film genre. Tourism for New Zealand is up, possibly due to its exposure in the series,[111] with the country's tourism industry waking up to an audience's familiarity.</p>
+            <h2 class="underline--magical" id="seemore">See Also</h2>
+            <div class="socializing">
+                <span>#Linkedin</span>
+                <span>#Behance</span>
+                <span>#Github</span>
+                <span>#Dribbble</span>
+                <span>#Codepen</span>
+            </div>
+        </div>
+        <table class="infobox">
+            <tbody>
+                <tr>
+                    <td colspan="3" style="text-align: center;background: #f9f9f9;color: #000000;font-size: 1.6rem;"> <b>The Lord of the Rings</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;"><a href="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/The_Lord_of_the_Rings_trilogy_poster.jpg/220px-The_Lord_of_the_Rings_trilogy_poster.jpg" class="image image-thumbnail"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/The_Lord_of_the_Rings_trilogy_poster.jpg/220px-The_Lord_of_the_Rings_trilogy_poster.jpg" alt="Jisoo Square Up Infobox" class="lzyPlcHld lzyTrns lzyLoaded" data-image-key="Jisoo_Square_Up_Infobox.jpg" data-image-name="Jisoo Square Up Infobox.jpg" data-src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/The_Lord_of_the_Rings_trilogy_poster.jpg/220px-The_Lord_of_the_Rings_trilogy_poster.jpg" width="100%"></a><br><i style="font-size: 13px;">Jisoo "<a href="/wiki/Square_Up_(mini-album)" title="Square Up (mini-album)" class="mw-redirect">Square Up</a>" Promotional Picture</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center; background: #f0f0f0; color: #000000; font-size: 95%;"><b>Basic Information</b>
+                    </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td style="vertical-align: top;"> <b>Birth name:</b> </td>
+                    <td>
+                        <p>Kim Jisoo
+                        </p>
+                    </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td style="vertical-align: top;"> <b>Hangul:</b> </td>
+                    <td>
+                        <p>김지수
+                        </p>
+                    </td>
+                </tr>
+
+
+                <tr style="vertical-align: top;">
+                    <td style="vertical-align: top;"> <b>Other Names:</b> </td>
+                    <td>
+                        <p>Chi Choo<br>Jichu
+                        </p>
+                    </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td style="vertical-align: top;"> <b>Birth date:</b> </td>
+                    <td>
+                        <p>January 3, 1995<span style="display:none"> (<span class="bday">1995-01-03</span>)</span><span class="noprint"> (age 23)</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="vertical-align:">
+                    <td style="vertical-align: top;"> <b>Birth place:</b> </td>
+                    <td>
+                        <p><a href="http://en.wikipedia.org/wiki/Seoul" class="extiw" title="wikipedia:Seoul">Seoul, South Korea</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="vertical-align:">
+                    <td style="vertical-align: top;"> <b>Height:</b> </td>
+                    <td>
+                        <p>162 cm (5'3")
+                        </p>
+                    </td>
+                </tr>
+                <tr style="vertical-align:">
+                    <td style="vertical-align: top;"> <b>Weight:</b> </td>
+                    <td>
+                        <p>45 kg (99 lbs)
+                        </p>
+                    </td>
+                </tr>
+                <tr style="vertical-align:">
+                    <td style="vertical-align: top;"> <b>Blood type:</b> </td>
+                    <td>
+                        <p>A
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center; background: #f0f0f0; color: #000000; font-size: 95%;"><b>Occupation</b>
+                    </td>
+                </tr>
+
+                <tr style="vertical-align:">
+                    <td style="vertical-align: top;"> <b>Job:</b> </td>
+                    <td>
+                        <p>Singer
+                        </p>
+                    </td>
+                </tr>
+
+                <tr style="vertical-align:">
+                    <td style="vertical-align: top;"> <b>Position:</b> </td>
+                    <td>
+                        <p>Lead Vocalist &amp; Visual
+                        </p>
+                    </td>
+                </tr>
+                <tr style="vertical-align:">
+                    <td style="vertical-align: top;"> <b>Instrument(s):</b> </td>
+                    <td>
+                        <p>Drum, Guitar
+                        </p>
+                    </td>
+                </tr>
+                <tr style="vertical-align:">
+                    <td style="vertical-align: top;"> <b>Years active:</b> </td>
+                    <td>
+                        <p>2016–present
+                        </p>
+                    </td>
+                </tr>
+
+                <tr style="vertical-align:">
+                    <td style="vertical-align: top;"> <b>Agency:</b> </td>
+                    <td>
+                        <p><a href="/wiki/YG_Entertainment" title="YG Entertainment">YG Entertainment</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="vertical-align:">
+                    <td style="vertical-align: top;"> <b>Associated acts:</b> </td>
+                    <td>
+                        <p><a href="/wiki/BLACKPINK" title="BLACKPINK">BLACKPINK</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="vertical-align:">
+                    <td style="vertical-align: top;"> <b>Signature:</b> </td>
+                    <td>
+                        <p><a href="https://vignette.wikia.nocookie.net/blinks/images/8/80/Jisoo%27s_Signature.PNG/revision/latest?cb=20180225214423" class="image image-thumbnail"><img src="https://vignette.wikia.nocookie.net/blinks/images/8/80/Jisoo%27s_Signature.PNG/revision/latest/scale-to-width-down/100?cb=20180225214423" alt="Jisoo&amp;#039;s Signature" class="lzyPlcHld lzyTrns lzyLoaded" data-image-key="Jisoo%27s_Signature.PNG" data-image-name="Jisoo's Signature.PNG" data-src="https://vignette.wikia.nocookie.net/blinks/images/8/80/Jisoo%27s_Signature.PNG/revision/latest/scale-to-width-down/100?cb=20180225214423" width="100" height="105" onload="if(typeof ImgLzy==='object'){ImgLzy.load(this)}"></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<style>
+    .panel h1 {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 10px 0 0 0;
+        letter-spacing: 3px;
+        top: 0;
+        padding: 10px 0 0 0;
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .panel h1::after {
+        width: 100%;
+        height: 2px;
+        background: black;
+        display: block;
+        content: '';
+        margin-bottom: 20px;
+        margin-top: 8px;
+    }
+
+    .panel {
+        position: relative;
+        transition: all 0.2s;
+        color: black;
+        padding: 0px 40px 0px 40px;
+    }
+
+    .kiwi {
+        width: 70%;
+        padding: 0 1rem 0 0;
+    }
+
+    .heading1 {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0 0 0 0;
+        letter-spacing: 3px;
+        top: 0;
+        padding: 20px 0 0 0;
+        width: 100%;
+        font-size: 26px;
+        font-family: "PT sans", sans-serif;
+    }
+
+    .kiwi h2 {
+        font-size: 17px;
+        text-transform: uppercase;
+        font-family: "PT sans", sans-serif;
+        font-weight: 600;
+        margin-top: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .kiwi h2::after {
+        width: 0px;
+        height: 0px;
+        background: black;
+        display: block;
+        content: '';
+        margin-top: 8px;
+    }
+
+    .kiwi p {
+        color: #555555;
+        font-size: 15px;
+        line-height: 24px;
+        text-align: justify;
+        word-spacing: 6px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .underline--magical {
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0.2em;
+        background-position: 0% 88%;
+        padding-bottom: 10px;
+        transition: background-size 0.25s ease-in;
+        display: inline;
+        margin-top: 1rem;
+    }
+
+    .magical_link {
+        background-image: linear-gradient(90deg, #2196F3 0%, #03A9F4 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0.12em;
+        background-position: 0% 88%;
+        padding-bottom: 6px;
+        display: inline;
+    }
+
+    .infobox {
+        padding: 0.5rem;
+        font-size: 15px;
+        width: 30%;
+        padding: 2rem 1rem 0 2rem;
+    }
+
+    .infobox b {
+        line-height: 2rem;
+        font-weight: bold;
+    }
+
+    .infobox p {
+        line-height: 2rem;
+    }
+
+    .flexy {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .socializing span {
+        font-size: 16px;
+        display: table;
+        padding: 0.2rem;
+        border-radius: 4px;
+        font-weight: 600;
+        font-family: "Roboto mono";
+        color: #0027ff;
+        margin: 0.4rem;
+    }
+
+    .chapter {
+        list-style: none outside none;
+        width: 180px;
+        padding: 0.5rem;
+        line-height: 2em;
+        float: right;
+        position: sticky;
+        margin: 0rem 0 0.5rem 0.8rem;
+        border: 2px solid;
+    }
+
+</style>

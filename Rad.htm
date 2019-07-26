@@ -1,0 +1,522 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>RadIt</title>
+    <meta charset='UTF-8' />
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .row {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+            width: 100%;
+            top: 0px;
+            padding: 0rem 0.8rem;
+            /* box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.08); */
+        }
+
+        .srchicon {
+            fill: #000000;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        @media screen and (max-width: 600px) {
+            .icons {
+                display: block;
+                margin: 3px 0.4rem;
+            }
+        }
+
+        @media screen and (max-width: 1199px) and (min-width: 601px) {
+            .icons {
+                display: block;
+                margin: 3px 1.4rem;
+            }
+
+        }
+
+        @media screen and (min-width: 1200px) {
+            .icons {
+                display: block;
+                margin: 0px 1rem;
+            }
+        }
+
+        .form_container {
+            display: flex;
+        }
+
+        .total-results {
+            display: inline-block;
+        }
+
+        @media(max-width:360px) {
+            .total-results {
+                display: block;
+            }
+        }
+
+        .form-inline {
+            width: 100%;
+            max-width: 700px;
+            border: 2px solid #000000;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #ffffff;
+            border: none;
+            outline: none;
+            color: white;
+            border-radius: 8px;
+            padding: 0rem 0.6rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+
+        .search-field {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+            height: 2.9rem;
+            padding-left: 0.5rem;
+            border-radius: 6px;
+            border: 4px;
+            background: rgb(255, 255, 255);
+            color: #000;
+            font-size: 1.1rem;
+        }
+
+        * {
+            margin: 0;
+            outline: none;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .formcon {
+            padding: 0.4rem 0.3rem 0.2rem 0.3rem;
+            display: flex;
+            background: #ffffff;
+            justify-content: center;
+        }
+
+    </style>
+
+
+    <div class="trdcon">
+
+        <div class="v-tab">
+
+            <div class="v-tab_container">
+
+                <div id="vtab1" class="v-tab_content" style="display: block;">
+
+                    <div class="row">
+                        <h1>Tyuzu</h1>
+                    </div>
+                    <div class="tabcontent">
+
+                        <div id="app" class="app"></div>
+                    </div>
+                </div>
+                <!-- #tab1 -->
+
+                <div id="vtab2" class="v-tab_content" style="display: none;">
+                    <div class="formcon">
+                        <form class="form-inline " id="search-form" name="search-form" onsubmit="return search()">
+                            <div width="100%" class="form_container">
+                                <div class="d3 float-right" style="width:100%;">
+                                    <input class="form-control search-field" type="search" id="query" style="width:100%;" placeholder="Web 'em up">
+                                </div>
+                                <button class="" type="submit" id="search-btn" name="search-btn" value="">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 57.966 57.966" class="srchicon">
+                <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path>
+              </svg>
+    </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="R6-Wf">
+                        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/bird">HTML5</a>
+                        </div>
+                        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/flowers">CSS3</a>
+                        </div>
+                        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/animal">JavaScript</a>
+                        </div>
+                        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">SVG</a>
+                        </div>
+                        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/parrot">C++</a>
+                        </div>
+                        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/eagle">Python</a>
+                        </div>
+                        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/nature">Rust</a>
+                        </div>
+                        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">Gravit</a>
+                        </div>
+                        <div class="_3TUA0 x1MBX"><a class="_2634o" href="/search/photos/wallpaper">UI/UX</a>
+                        </div>
+                    </div>
+                    <div class="tabcontent">
+                        <p>Dui sociosqu vitae varius nulla habitasse inceptos pharetra feugiat curabitur, nibh molestie est semper mattis malesuada viverra auctor, duis pulvinar quam diam scelerisque ut nullam condimentum ut per conubia feugiat ultricies tristique dictum.
+
+                        </p>
+                    </div>
+                </div>
+                <!-- #tab2 -->
+
+                <div id="vtab3" class="v-tab_content" style="display: none;">
+                    <div class="tabcontent">
+                        <p>Morbi cursus dapibus ut donec commodo consequat arcu turpis hendrerit luctus nulla aliquam tempor diam massa faucibus vitae vehicula, ultricies volutpat nullam phasellus dui auctor senectus morbi tellus potenti iaculis bibendum ipsum sodales non.
+
+                        </p>
+                    </div>
+                </div>
+                <!-- #tab3 -->
+
+                <div id="vtab4" class="v-tab_content" style="display: none;">
+                    <div class="tabcontent">
+                        <p>Per ligula mollis vulputate tortor urna platea non maecenas fames, maecenas ante senectus suspendisse ultrices aptent torquent laoreet scelerisque ut integer arcu magna ultricies mollis.
+
+                        </p>
+                    </div>
+                </div>
+                <!-- #tab4 -->
+
+                <div id="vtab5" class="v-tab_content" style="display: none;">
+                    <div class="tabcontent">
+                        <p>Per ligula mollis vulputate tortor urna platea non maecenas fames, maecenas ante senectus suspendisse ultrices aptent torquent laoreet scelerisque ut integer arcu magna ultricies mollis.
+
+                        </p>
+                    </div>
+                </div>
+                <!-- #tab5 -->
+            </div>
+            <ul class="v-tab_tab-head">
+                <li rel="vtab1" class="active"><svg class="ticons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"><path d="M30.402 7.094c-1.058.47-2.198.782-3.392.928 1.218-.725 2.154-1.885 2.595-3.256-1.134.674-2.405 1.165-3.75 1.43-1.077-1.148-2.612-1.862-4.31-1.862-3.268 0-5.915 2.635-5.915 5.893 0 .464.056.91.155 1.34-4.915-.244-9.266-2.59-12.18-6.158-.51.87-.806 1.885-.806 2.96 0 2.044 1.045 3.847 2.633 4.905-.974-.032-1.883-.3-2.68-.736v.07c0 2.857 2.034 5.236 4.742 5.773-.498.138-1.022.21-1.56.21-.38 0-.75-.034-1.11-.103.75 2.344 2.93 4.042 5.518 4.09-2.024 1.58-4.57 2.523-7.333 2.523-.478 0-.952-.032-1.41-.085 2.613 1.674 5.72 2.65 9.054 2.65 10.872 0 16.814-8.976 16.814-16.765 0-.254-.008-.507-.018-.762 1.155-.83 2.155-1.868 2.95-3.047z"></path></svg>
+                </li>
+                <li rel="vtab2" class="">
+                    <div>
+                        <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+             </svg>
+                    </div>
+                </li>
+                <li rel="vtab3" class="">
+                    <div>
+                        <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                            </svg>
+                    </div>
+                </li>
+                <li rel="vtab4" class="">
+                    <div><svg class="ticons" viewBox="0 0 24 24" role="img" stroke="#000000">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>                         
+                        </svg></div>
+                </li>
+                <li rel="vtab5" class="">
+                    <div><svg class="ticons" viewBox="0 0 24 24" role="img" stroke="#000000">
+                            <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+
+        </svg>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <style>
+        ._2634o {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.18);
+            text-transform: capitalize;
+            display: block;
+            font-weight: 600;
+            transition: background-color .15s ease-in-out;
+            text-decoration: none;
+            padding: 10px;
+            color: #000000;
+        }
+
+        .x1MBX {
+            margin: 4px 4px;
+            overflow: hidden;
+            border-radius: 3px;
+            text-align: center;
+            /*flex-basis: 100px;*/
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            flex-shrink: 0;
+            max-width: 250px;
+        }
+
+        .R6-Wf {
+            flex-wrap: nowrap;
+            display: flex;
+            background: #ffffff;
+            overflow-x: visible;
+            overflow-y: hidden;
+        }
+
+        .R6-Wf::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        .R6-Wf::-webkit-scrollbar-thumb {
+            background-color: #555;
+        }
+
+        .R6-Wf div:nth-child(6n-5) {
+            background: #ecec84 url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-4) {
+            background: #ffb69b url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-3) {
+            background: #ffacbb url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-2) {
+            background: #8bc3e5 url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n-1) {
+            background: #a299ca url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+        .R6-Wf div:nth-child(6n) {
+            background: #7ccaae url(http://www.graphicartsunit.com/images/noise.png);
+        }
+
+    </style>
+
+
+
+    <style>
+        .v-tab {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .v-tab_tab-head {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            max-width: 600px;
+            position: fixed;
+            display: flex;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .v-tab_tab-head li {
+            cursor: pointer;
+            height: 3rem;
+            background: #f3f3f3;
+            border-bottom: 0px;
+            overflow: hidden;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .v-tab_tab-head li:hover {
+            background-color: #f5f5f5;
+            color: #000;
+        }
+
+        .v-tab_tab-head li.active {
+            background-color: #fff;
+            color: #000000 !important;
+            border-top: 3px solid #000;
+            font-size: 1.6rem !important;
+        }
+
+        .v-tab_container {
+            float: left;
+            width: 100%;
+            height: 100%;
+            min-height: 132px;
+        }
+
+        .v-tab_content {
+            /*padding: 10px 20px;*/
+            display: none;
+        }
+
+        .v-tab_content> :first-child {
+            margin-top: 0;
+        }
+
+
+        .tabcontent {
+            padding: 0.4rem 0.4rem;
+            box-shadow: inset 0 0 12px #e2e2e2;
+            background: #ececec;
+        }
+
+        .app {
+            padding-bottom: 3rem;
+        }
+
+    </style>
+    <style>
+        .scrollmenu {
+            overflow: auto;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+
+        .pincodemain {
+            margin: 0px 0rem;
+            width: 3rem !important;
+            height: 3rem !important;
+            fill: none;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.37);
+            border-radius: 8px;
+            background: #fff;
+            padding: 2px;
+            stroke: #1ed760;
+        }
+
+        #image {
+            width: 100%;
+            height: auto;
+        }
+
+        .ticons,
+        .heart {
+            fill: none;
+            stroke: #000000;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: .2s ease;
+            filter: drop-shadow(0px 1px 2px #00000055);
+        }
+
+        .ticons {
+            height: 2.8rem;
+            width: 2.8rem;
+
+        }
+
+        .heart {
+            height: 3rem;
+            width: 3rem;
+            /*margin: 0 1rem;
+             stroke: #b932fd; */
+        }
+
+    </style>
+
+    <script>
+        $(".v-tab_content").hide();
+        $(".v-tab_content:first").show();
+
+        $(".v-tab_tab-head li").click(function() {
+
+            $(".v-tab_content").hide();
+            var activeTab = $(this).attr("rel");
+            $("#" + activeTab).fadeIn();
+            $(".v-tab_tab-head li").removeClass("active");
+            $(this).addClass("active");
+
+
+        });
+
+    </script>
+    <script>
+        //        fetch('https://api.reddit.com/r/technology/top/?sort=top&t=all')
+        //fetch('https://api.reddit.com/r/all/new/?sort=new&t=all')
+        .then(res => res.json())
+            .then(res => res.data.children)
+            .then(res => res.map(post => ({
+                author: post.data.author,
+                link: post.data.url,
+                img: post.data.thumbnail,
+                title: post.data.title
+            })))
+            .then(res => res.map(render))
+            .then(res => console.log(res))
+        const app = document.querySelector('#app');
+        const render = post => {
+            const node = document.createElement('div');
+            node.innerHTML = `
+            <h2 class="raditechtwo">
+              <a href="${post.link}" class="raditae">
+                <img src="${post.img}" class="raditimg" />
+                <span class="raditspan">${post.title}</span>
+              </a>
+           </h2>`;
+            app.appendChild(node);
+        }
+
+    </script>
+
+    <style>
+        .raditechtwo {
+            margin-bottom: 0.4rem;
+            box-shadow: 1px 2px 10px #00000014;
+            background: #ffffff;
+        }
+
+        .raditae {
+            display: flex;
+            color: #000000;
+        }
+
+        .trdcon {
+            background: #ffffff;
+        }
+
+        .raditspan {
+            padding: 0 0.6rem;
+        }
+
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" id="viewport" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="noimageindex, noarchive" name="robots">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+    <meta content="yes" name="mobile-web-app-capable">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,600,900%7CRoboto+Mono:300,400,500,700" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: "Roboto mono", Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /*        background: #ffffff url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-colorful.png);*/
+        }
+
+        /*
+        body:before {
+            background-image: url(file:///C:/Users/me/Desktop/Fotolia_115715579_Subscription_Monthly_XXL.jpg);
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            content: '';
+            background-position: center;
+            z-index: -1;
+        }
+*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            vertical-align: baseline;
+            list-style-type: none;
+            border: 0;
+            outline: 0;
+        }
+
+    </style>
+</head>
+
+<div class="row">
+    <div class="topright">
+        <svg class="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"><path d="M30.402 7.094c-1.058.47-2.198.782-3.392.928 1.218-.725 2.154-1.885 2.595-3.256-1.134.674-2.405 1.165-3.75 1.43-1.077-1.148-2.612-1.862-4.31-1.862-3.268 0-5.915 2.635-5.915 5.893 0 .464.056.91.155 1.34-4.915-.244-9.266-2.59-12.18-6.158-.51.87-.806 1.885-.806 2.96 0 2.044 1.045 3.847 2.633 4.905-.974-.032-1.883-.3-2.68-.736v.07c0 2.857 2.034 5.236 4.742 5.773-.498.138-1.022.21-1.56.21-.38 0-.75-.034-1.11-.103.75 2.344 2.93 4.042 5.518 4.09-2.024 1.58-4.57 2.523-7.333 2.523-.478 0-.952-.032-1.41-.085 2.613 1.674 5.72 2.65 9.054 2.65 10.872 0 16.814-8.976 16.814-16.765 0-.254-.008-.507-.018-.762 1.155-.83 2.155-1.868 2.95-3.047z"></path></svg>
+    </div>
+    <div class="formcon">
+        <form class="form-inline " id="search-form" name="search-form" onsubmit="return search()">
+            <div width="100%" class="form_container">
+                <div class="d3" style="width:100%;">
+                    <input class="form-control search-field" type="search" id="query" style="width:100%;" placeholder="Search">
+                </div>
+                <button class="search-btn" type="submit" id="search-btn" name="search-btn">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 57.966 57.966" class="srchicon">
+                      <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path>
+                   </svg>                
+                            </button>
+            </div>
+        </form>
+        <div>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                            </svg>
+        </div>
+        <div>
+            <svg class="ticons" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" stroke="#000000">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+             </svg>
+        </div>
+    </div>
+    <div class="hidemob">
+        <div class="topright">
+            <svg class="pincodeMain" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" x="0px" y="0px">
+                <g id="art">
+                   <image id="image" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://vignette.wikia.nocookie.net/loonatheworld/images/6/6d/Yves_debut_photo_6.png/revision/latest/scale-to-width-down/350?cb=20171120144804" preserveAspectRatio="xMidYMid slice"></image>
+                </g>
+             </svg>
+        </div>
+    </div>
+</div>
+<style>
+    .row {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        width: 100%;
+        top: 0px;
+        padding: 0.2rem 2rem;
+        box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    .ticons,
+    .heart {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: .2s ease;
+        filter: drop-shadow(0px 1px 2px #00000055);
+    }
+
+    .heart {
+        height: 3.3rem;
+        width: 3.3rem;
+        margin: 0 1rem;
+        stroke: #b932fd;
+    }
+
+    .topright {
+        align-self: center;
+    }
+
+    .formcon {
+        padding: 0.2rem 0.4rem;
+        display: flex;
+        background: #ffffff;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-inline {
+        align-self: center;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .form_container {
+        display: flex;
+        border: solid 3px transparent;
+        border-radius: 10px;
+        background: transparent;
+        /* background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ffffff, #ffffff); */
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.33);
+    }
+
+    .d3 {
+        border-radius: 5px 0 0 5px;
+    }
+
+    .search-field {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 4px;
+        border-radius: 8px 0 0 8px;
+        outline: none;
+        padding: 0rem 1rem;
+        background-image: linear-gradient(whitesmoke, #e6e6e6);
+        color: #000;
+        height: 3rem;
+        font-size: 1.1rem;
+        /* box-shadow: 0px 0px 0px 3px rgb(0, 0, 0); */
+    }
+
+    .search-btn {
+        height: 3rem;
+        padding: 0rem 0.6rem;
+    }
+
+    button {
+        background-image: linear-gradient(dimgrey, black, #5f5f5f);
+        border: none;
+        outline: none;
+        color: white;
+        border-radius: 0 8px 8px 0;
+        padding: 0rem 0.4rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19); */
+    }
+
+    .srchicon {
+        fill: #ffffff;
+        height: 2rem;
+        margin: 0rem 0.1rem;
+    }
+
+    .ticons {
+        display: block;
+        margin: 0px 0 0 1rem;
+        height: 2.8rem;
+    }
+
+    .hidemob {
+        align-self: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .pincodemain {
+        margin: 0px 0rem;
+        width: 3.3rem !important;
+        height: 3.3rem !important;
+        fill: none;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.37);
+        border-radius: 8px;
+        background: #fff;
+        padding: 2px;
+        stroke: #1ed760;
+    }
+
+    #image {
+        width: 100%;
+        height: auto;
+    }
+
+</style>
